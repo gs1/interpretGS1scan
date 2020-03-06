@@ -7,7 +7,7 @@
  <li><code>dl</code>: The equivalent GS1 Digital Link URL (on id.gs1.org)</li>
 <li><code>ol</code>: An ordered array of objects parsed/interpreted from the input string:<ul>
  <li><code>ai</code>: the GS1 Application Identifier</li>
- <li><code>label</code: what that AI is used for</li>
+ <li><code>label</code>: what that AI is used for</li>
   <li><code>value</code>: the value</li></ul></li></ul>
  <p>The order for the <code>ol</code> list matches that found in a GS1 Digital Link URI</p><ol>
  <li>primary identifier</li>
