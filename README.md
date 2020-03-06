@@ -1,6 +1,12 @@
-# interpretGS1scan
-<p>A set of functions for interpreting the string of data in various GS1 formats, as found in barcodes of different types.</p>
-<p>It depends on the <a href="https://github.com/gs1/GS1DigitalLinkToolkit.js">GS1 Digital Link toolkit</a>.</p>
+# Interpret GS1 scan
+
+<p>Interpret GS1 scan is a JavaScript library that interprets the string of data in various GS1 formats, as found in barcodes of different types.</p>
+
+<p>You might want to head over to the <a href="https://gs1.github.io/interpretGS1scan/camera.html">demo</a>.</p>
+<img src="demoQR.gif" alt="QR code for https://gs1.github.io/interpretGS1scan/camera.html" style="width:116px; margin:0 auto; display:block; margin: 1em" />
+
+
+<p>Interpret GS1 scan depends on the <a href="https://github.com/gs1/GS1DigitalLinkToolkit.js">GS1 Digital Link toolkit</a>.</p>
 <p>If there are no errors, the <code>interpretScan()</code> function returns an object as follows<p><ul>
  <li><code>AIbrackets</code>: The equivalent GS1 element string in human-readable AI syntax</li>
 <li><code>AIfnc1</code>: The equivalent GS1 element string in AI syntax with FNC1 (as used in barcodes)</li>

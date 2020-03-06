@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="ZXing for JS">
+
+  <title>GS1 scanner demo using ZXing TypeScript | Decoding from camera stream</title>
+
+  <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null"
+    href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+  <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null"
+    href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
+  <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null"
+    href="https://unpkg.com/milligram@1.3.0/dist/milligram.min.css">
+    <script src="https://gs1.github.io/GS1DigitalLinkCompressionPrototype/src/GS1DigitalLinkToolkit.js"></script>
+    <script src="https://gs1.github.io/interpretGS1scan/interpretGS1Scan.js"></script>
+
+  <style>
+  p.aiDisplay {
+    display: table-row;  
+  }
+
+  p.aiDisplay span {
+    display: table-cell;
+  }
+
+  p.aiDisplay span.ai {
+    width: 2em;
+  }
+
+  p.aiDisplay span.aiLabel {
+    width: 12em;
+  }
+
+  h1.title {
+    font-size:1.5em;
+  }
+
+  footer {
+    margin-top: 2em;;
+    padding-top:1em;
+    border-top: thin solid #999;
+  }
+
+  </style>
+
+</head>
+
+<body>
+
+  <main class="wrapper" style="padding-top:2em">
+
+    <section class="container" id="demo-content">
+      <h1 class="title">Scan a GS1 1D/2D Code from your device's video Camera</h1>
+
+      <div>
+        <a class="button" id="startButton">Start</a>
+        <a class="button" id="resetButton">Reset</a>
+      </div>
+
+      <div>
+        <video id="video" width="300" height="200" style="border: 1px solid gray"></video>
+      </div>
+
+      <div id="sourceSelectPanel" style="display:none">
+        <label for="sourceSelect">Change video source:</label>
+        <select id="sourceSelect" style="max-width:400px">
+        </select>
+      </div>
+
+      <label for="result">Result:</label>
+      <pre><span style="margin: 0.5em">Raw output:</span><code id="result"></code></pre>
+      <label for="interpretation">Interpretation:</label>
+      <div id="interpretation"></div>
+
+    </section>
+
+    <footer class="footer">
+      <section class="container">
+        <p>This is a modified version of the <a href="https://zxing-js.github.io/library/examples/multi-camera/">ZXing TypeScript Demo</a> which is licensed under the <a href="https://github.com/zxing-js/library#license" title="MIT">MIT</a> (see the <a href="https://github.com/zxing-js/library/tree/master/docs/examples/multi-camera/">source code</a>). Note that this demo calls the <a href="https://github.com/gs1/GS1DigitalLinkToolkit.js">GS1 Digital Link Toolkit</a>, on which the <a href="https://github.com/gs1/interpretGS1scan">interpretGS1scan library</a> depends.</p>
+      <p>Please report bugs and problems, or make suggestions for improvement, by raising an <a href="https://github.com/gs1/interpretGS1scan">issue on GitHub</a>.</p>
+      </section>
+    </footer>
+
+  </main>
+
+  <script type="text/javascript" src="https://unpkg.com/@zxing/library@latest"></script>
+  <script type="text/javascript">
+    window.addEventListener('load', function () {
+      let selectedDeviceId;
+      const codeReader = new ZXing.BrowserMultiFormatReader()
+      console.log('ZXing code reader initialized')
+      codeReader.getVideoInputDevices()
+        .then((videoInputDevices) => {
+          const sourceSelect = document.getElementById('sourceSelect')
+          selectedDeviceId = videoInputDevices[0].deviceId
+          if (videoInputDevices.length >= 1) {
+            videoInputDevices.forEach((element) => {
+              const sourceOption = document.createElement('option')
+              sourceOption.text = element.label
+              sourceOption.value = element.deviceId
+              sourceSelect.appendChild(sourceOption)
+            })
+
+            sourceSelect.onchange = () => {
+              selectedDeviceId = sourceSelect.value;
+            };
+
+            const sourceSelectPanel = document.getElementById('sourceSelectPanel')
+            sourceSelectPanel.style.display = 'block'
+          }
+
+          document.getElementById('startButton').addEventListener('click', () => {
+            codeReader.decodeFromVideoDevice(selectedDeviceId, 'video', (result, err) => {
+              if (result) {
+                console.log(result)
+                document.getElementById('result').textContent = result.text;
+                interpretResult(result.text);
+              }
+              if (err && !(err instanceof ZXing.NotFoundException)) {
+                console.error(err)
+                document.getElementById('result').textContent = err
+              }
+            })
+            console.log(`Started continous decode from camera with id ${selectedDeviceId}`)
+          })
+
+          document.getElementById('resetButton').addEventListener('click', () => {
+            codeReader.reset()
+            document.getElementById('result').textContent = '';
+            console.log('Reset.')
+          })
+
+        })
+        .catch((err) => {
+          console.error(err)
+        })
+    })
+
+function interpretResult(scan) {
+  let scanObj = interpretScan(scan);
+
+  // We can test whether we have any errors at this point by looking for a value of errmsg
+
+  if (scanObj.errmsg !== undefined) {
+    console.log('We have this error message ' + scanObj.errmsg);
+  } else {    
+    let outputNode = document.getElementById('interpretation');
+    outputNode.innerHTML = '';
+    for (i in scanObj.ol) { // scanObj.ol is the ordered list we want to go through
+      let p = document.createElement('p');
+      p.id = '_' + scanObj.ol[i].ai;
+      p.classList.add('aiDisplay');
+      let span = document.createElement('span');
+      span.classList.add('ai');
+      let ai = (scanObj.ol[i].ai == undefined) ? '' : scanObj.ol[i].ai;
+      span.appendChild(document.createTextNode(ai));
+      p.appendChild(span);
+      span = document.createElement('span');
+      span.classList.add('aiLabel');
+      let label = (scanObj.ol[i].label == undefined) ? '' : scanObj.ol[i].label;
+      span.appendChild(document.createTextNode(label));
+      p.appendChild(span);
+      span = document.createElement('span');
+      p.appendChild(span);
+      span = document.createElement('span');
+      span.classList.add('aiValue');
+      let v = (scanObj.ol[i].value == undefined) ? '' : scanObj.ol[i].value;
+      span.appendChild(document.createTextNode(v));
+      p.appendChild(span);
+
+      outputNode.appendChild(p);
+    }
+  }
+}
+
+
+
+
+  </script>
+
+</body>
+
+</html>
