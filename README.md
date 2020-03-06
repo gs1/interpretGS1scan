@@ -9,9 +9,9 @@ If there are no errors, the `interpretScan()` function returns an object as foll
 * `AIfnc1`: The equivalent GS1 element string in AI syntax with FNC1 (as used in barcodes)
 * `dl`: The equivalent GS1 Digital Link URL (on id.gs1.org)
 * `ol`: An ordered array of objects parsed/interpreted from the input string:
-** `ai':    the GS1 Application Identifier
-** `label`: what that AI is used for
-** `value`: the value
+..* `ai':    the GS1 Application Identifier
+..* `label`: what that AI is used for
+..* `value`: the value
 The order for the `ol` list matches that found in a GS1 Digital Link URI
 1. primary identifier
 2. any applicable qualifiers
