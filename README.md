@@ -19,4 +19,4 @@
  <li>Human readable AI syntax (i.e. with brackets)</li>
  <li>Pure AI syntax (i.e. with the FNC1 character)</li>
  <li>GS1 Digital Link URI</li></ul>
-<p>If the input string cannot be interpreted, i.e. it's not a valid GS1 string, then the returned object has a value for <code>errmsg<code> which is the system error message.</p>
+<p>If the input string cannot be interpreted, i.e. it's not a valid GS1 string, then the returned object has a value for <code>errmsg</code> which is the system error message.</p>
