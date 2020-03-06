@@ -13,10 +13,10 @@ If there are no errors, the `interpretScan()` function returns an object as foll
 ** `label`: what that AI is used for
 ** `value`: the value
 The order for the `ol` list matches that found in a GS1 Digital Link URI
-# primary identifier
-# any applicable qualifiers
-# any data attributes
-# any non-GS1 AIs and their values
+1. primary identifier
+2. any applicable qualifiers
+3. any data attributes
+4. any non-GS1 AIs and their values
 Simply pass the string to be interpreted to the interpretScan() function.
 
 It can handle any of the 3 formats:
