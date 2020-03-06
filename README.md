@@ -1,6 +1,6 @@
 # interpretGS1scan
 <p>A set of functions for interpreting the string of data in various GS1 formats, as found in barcodes of different types.</p>
-<p>It depends on the <a href="https://github.com/gs1/GS1DigitalLinkToolkit.js"GS1 Digital Link toolkit</a>.</p>
+<p>It depends on the <a href="https://github.com/gs1/GS1DigitalLinkToolkit.js">GS1 Digital Link toolkit</a>.</p>
 <p>If there are no errors, the <code>interpretScan()</code> function returns an object as follows<p><ul>
  <li><code>AIbrackets</code>: The equivalent GS1 element string in human-readable AI syntax</li>
 <li><code>AIfnc1</code>: The equivalent GS1 element string in AI syntax with FNC1 (as used in barcodes)</li>
@@ -8,8 +8,8 @@
 <li><code>ol</code>: An ordered array of objects parsed/interpreted from the input string:<ul>
  <li><code>ai</code>: the GS1 Application Identifier</li>
  <li><code>label</code: what that AI is used for</li>
-  <li><code>value</code>: the value</li></ul></li>
- <p>The order for the `ol` list matches that found in a GS1 Digital Link URI</p><ol>
+  <li><code>value</code>: the value</li></ul></li></ul>
+ <p>The order for the <code>ol</code> list matches that found in a GS1 Digital Link URI</p><ol>
  <li>primary identifier</li>
  <li>any applicable qualifiers</li>
  <li>any data attributes</li>
