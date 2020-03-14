@@ -131,6 +131,7 @@
           document.getElementById('resetButton').addEventListener('click', () => {
             codeReader.reset()
             document.getElementById('result').textContent = '';
+            document.getElementById('interpretation').innerHTML = '';
             console.log('Reset.')
           })
 
