@@ -144,14 +144,18 @@
 
 function interpretResult(scan) {
   let scanObj = interpretScan(scan);
+  let outputNode = document.getElementById('interpretation');
+  outputNode.innerHTML = '';
 
   // We can test whether we have any errors at this point by looking for a value of errmsg
 
   if (scanObj.errmsg !== undefined) {
-    console.log('We have this error message ' + scanObj.errmsg);
+    console.log('From GS1 Digital Link toolkit: ' + scanObj.errmsg);
+    let p = document.createElement('p');
+    p.classList.add('error');
+    p.appendChild(document.createTextNode(scanObj.errmsg));
+    outputNode.appendChild(p);   
   } else {    
-    let outputNode = document.getElementById('interpretation');
-    outputNode.innerHTML = '';
     for (i in scanObj.ol) { // scanObj.ol is the ordered list we want to go through
       let p = document.createElement('p');
       p.id = '_' + scanObj.ol[i].ai;
