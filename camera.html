@@ -17,11 +17,11 @@
     <script src="https://gs1.github.io/interpretGS1scan/interpretGS1Scan.js"></script>
 
   <style>
-  p.aiDisplay {
+  p.aiDisplay, div#syntaxes p {
     display: table-row;  
   }
 
-  p.aiDisplay span {
+  p.aiDisplay span, div#syntaxes p label, div#syntaxes p span  {
     display: table-cell;
   }
 
@@ -32,6 +32,12 @@
   p.aiDisplay span.aiLabel {
     width: 12em;
   }
+
+  div#syntaxes p label {
+    width:14em;
+    font-weight: normal;
+  }
+
 
   h1.title {
     font-size:1.5em;
@@ -181,6 +187,55 @@ function interpretResult(scan) {
 
       outputNode.appendChild(p);
     }
+
+    // Now we want to show the different formats of the scanned string.
+
+    let label = document.createElement('label');
+    label.htmlFor = 'equivalents';
+    label.appendChild(document.createTextNode('Equivalent identifier(s)'));
+    outputNode.appendChild(label);
+    let div = document.createElement('div');
+    div.id = 'syntaxes';
+    let p = document.createElement('p');
+    label = document.createElement('label');
+    label.htmlFor = 'aiBrackets';
+    label.appendChild(document.createTextNode('Human-readable AI syntax'));
+    let span = document.createElement('span');
+    span.classList.add('syntax');
+    span.id = 'aiBrackets';
+    span.appendChild(document.createTextNode(scanObj.AIbrackets));
+    p.appendChild(label);
+    p.appendChild(span);
+    div.appendChild(p);
+
+    p = document.createElement('p');
+    label = document.createElement('label');
+    label.htmlFor = 'aiFNC1';
+    label.appendChild(document.createTextNode('Native AI syntax'));
+    span = document.createElement('span');
+    span.classList.add('syntax');
+    span.id = 'aiFNC1';
+    span.appendChild(document.createTextNode(scanObj.AIfnc1));
+    p.appendChild(label);
+    p.appendChild(span);
+    div.appendChild(p);
+
+    p = document.createElement('p');
+    label = document.createElement('label');
+    label.htmlFor = 'dl';
+    label.appendChild(document.createTextNode('GS1 Digital Link'));
+    span = document.createElement('span');
+    span.classList.add('syntax');
+    span.id = 'dl';
+    let a = document.createElement('a');
+    a.href = scanObj.dl;
+    a.appendChild(document.createTextNode(scanObj.dl));
+    span.appendChild(a);
+    p.appendChild(label);
+    p.appendChild(span);
+    div.appendChild(p);
+
+    outputNode.appendChild(div);
   }
 }
 
