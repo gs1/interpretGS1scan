@@ -6,50 +6,47 @@
   <meta name="author" content="ZXing for JS">
 
   <title>GS1 scanner demo using ZXing TypeScript | Decoding from camera stream</title>
-
-  <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null"
-    href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
-  <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null"
-    href="https://unpkg.com/normalize.css@8.0.0/normalize.css">
-  <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null"
-    href="https://unpkg.com/milligram@1.3.0/dist/milligram.min.css">
-    <script src="https://gs1.github.io/GS1DigitalLinkCompressionPrototype/src/GS1DigitalLinkToolkit.js"></script>
-    <script src="https://gs1.github.io/interpretGS1scan/interpretGS1Scan.js"></script>
+  <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"/>
+  <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://unpkg.com/normalize.css@8.0.0/normalize.css"/>
+  <link rel="preload" as="style" onload="this.rel='stylesheet';this.onload=null" href="https://unpkg.com/milligram@1.3.0/dist/milligram.min.css"/>
+  <script src="https://gs1.github.io/GS1DigitalLinkCompressionPrototype/src/GS1DigitalLinkToolkit.js"></script>
+  <script src="https://gs1.github.io/interpretGS1scan/interpretGS1Scan.js"></script>
 
   <style>
-  p.aiDisplay, div#syntaxes p {
-    display: table-row;  
+    p.aiDisplay span.ai {
+      width: 2em;
+    }
+
+    p.aiDisplay span.aiLabel {
+      width: 12em;
+    }
+
+    div#syntaxes p label {
+      width:14em;
+      font-weight: normal;
+    }
+
+    h1.title {
+      font-size:1.5em;
+    }
+
+    footer {
+      margin-top: 2em;;
+      padding-top:1em;
+      border-top: thin solid #999;
+    }
+
+  @media (min-width: 600px) {
+
+    p.aiDisplay, div#syntaxes p {
+      display: table-row;  
+    }
+
+    p.aiDisplay span, div#syntaxes p label, div#syntaxes p span  {
+      display: table-cell;
+    }
   }
-
-  p.aiDisplay span, div#syntaxes p label, div#syntaxes p span  {
-    display: table-cell;
-  }
-
-  p.aiDisplay span.ai {
-    width: 2em;
-  }
-
-  p.aiDisplay span.aiLabel {
-    width: 12em;
-  }
-
-  div#syntaxes p label {
-    width:14em;
-    font-weight: normal;
-  }
-
-
-  h1.title {
-    font-size:1.5em;
-  }
-
-  footer {
-    margin-top: 2em;;
-    padding-top:1em;
-    border-top: thin solid #999;
-  }
-
-  </style>
+</style>
 
 </head>
 
