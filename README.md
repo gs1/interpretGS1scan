@@ -4,7 +4,15 @@
 
 <p>You might want to head over to the <a href="https://gs1.github.io/interpretGS1scan/camera.html">demo</a>.</p>
 <img src="demoQR.gif" alt="QR code for https://gs1.github.io/interpretGS1scan/camera.html" style="width:116px; margin:0 auto; display:block; margin: 1em" />
-
+<p><strong>This demo does not work in all browsers</strong>. It seems to work well with:</p><ul>
+ <li>Samsung Internet on Android</li>
+ <li>Chrome on Android</li></ul>
+ <p>It is usable but without the beep or choice of camera when used with Safari on iOS</p>
+ <p>It does not work with Chrome on iOS</p>
+ <p>It does not work with Firefox on Windows</p>
+ <p>We'll do what we can to improve this but a lot of it is down to the underlying libraries.</p>
+ 
+ # The Interpret GS1 Scan library
 
 <p>Interpret GS1 scan depends on the <a href="https://github.com/gs1/GS1DigitalLinkToolkit.js">GS1 Digital Link toolkit</a>.</p>
 <p>If there are no errors, the <code>interpretScan()</code> function returns an object as follows<p><ul>
