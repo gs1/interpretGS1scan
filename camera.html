@@ -1,7 +1,7 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="ZXing for JS">
 
@@ -14,11 +14,13 @@
 
   <style>
     p.aiDisplay span.ai {
-      width: 2em;
+      width: 3em;
+      padding-right: 1em;
     }
 
     p.aiDisplay span.aiLabel {
-      width: 12em;
+      width: 13em;
+      padding-right: 1em;
     }
 
     div#syntaxes p label {
@@ -101,12 +103,22 @@
           const sourceSelect = document.getElementById('sourceSelect')
           selectedDeviceId = videoInputDevices[0].deviceId
           if (videoInputDevices.length >= 1) {
+            let i=0;
+            let s=null;
             videoInputDevices.forEach((element) => {
               const sourceOption = document.createElement('option')
               sourceOption.text = element.label
+              if ((element.label.indexOf("rear") > -1) || (element.label.indexOf("back") > -1)) {
+                  s=i;
+              }
               sourceOption.value = element.deviceId
               sourceSelect.appendChild(sourceOption)
+              i++;
             })
+            if (s !== null) {
+                sourceSelect.selectedIndex  = s;
+                selectedDeviceId = sourceSelect.value;
+            }
 
             sourceSelect.onchange = () => {
               selectedDeviceId = sourceSelect.value;
