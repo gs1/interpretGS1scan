@@ -32,7 +32,7 @@
 
 <p>A second function, <code>displayInterpretation()</code> takes two parameters: the string (which it passes to <code>interpretScan()</code>) and the element in an HTML page to which it can write its interpretation (as a number of DOM elements).</p>
 
-<p>A basic <a href="gs1.github.io/interpretGS1scan/">demo is available</a>.</p>
+<p>A basic <a href="https://gs1.github.io/interpretGS1scan/">demo is available</a>.</p>
 
 # Scanner demo
 
