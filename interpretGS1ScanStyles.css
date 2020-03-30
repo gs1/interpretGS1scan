@@ -1,0 +1,29 @@
+p.aiDisplay span.ai {
+  width: 2em;
+}
+
+p.aiDisplay span.aiLabel {
+  width: 12em;
+}
+
+div#syntaxes p label {
+  width:14em;
+  font-weight: normal;
+}
+
+label.sectionHeader {
+  display:block;
+  margin: .5em 0;
+  font-weight: bold;
+}
+
+@media (min-width: 600px) {
+
+  p.aiDisplay, div#syntaxes p {
+    display: table-row;  
+  }
+
+  p.aiDisplay span, div#syntaxes p label, div#syntaxes p span  {
+    display: table-cell;
+  }
+}

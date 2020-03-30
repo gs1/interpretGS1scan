@@ -75,6 +75,7 @@ function interpretScan(scan) {
       gs1Array = gs1dlt.extractFromGS1digitalLink(gs1DigitalLinkURI);
     } catch(err) {
     	console.log(err);
+      return {'errmsg' : err}  // Quit here if we have an error
     }
 
     // Want to find the primary identifier
@@ -188,3 +189,102 @@ function gs1ToISO(gs1Date) {
   }
   return rv;
 }
+
+function displayInterpretation(scan, outputNode) {
+  let scanObj = interpretScan(scan);
+  outputNode.innerHTML = '';
+
+  // We can test whether we have any errors at this point by looking for a value of errmsg
+
+  if (scanObj.errmsg !== undefined) {
+    console.log('From GS1 Digital Link toolkit: ' + scanObj.errmsg);
+    let p = document.createElement('p');
+    p.classList.add('error');
+    p.appendChild(document.createTextNode(scanObj.errmsg));
+    outputNode.appendChild(p);   
+  } else {    
+    let label = document.createElement('label');
+    label.classList.add('sectionHeader');
+    label.htmlFor = 'identifiers';
+    label.appendChild(document.createTextNode('GS1 identifiers'));
+    outputNode.appendChild(label);
+    let div = document.createElement('div');
+    div.id = 'identifiers';
+    for (i in scanObj.ol) { // scanObj.ol is the ordered list we want to go through
+      let p = document.createElement('p');
+      p.id = '_' + scanObj.ol[i].ai;
+      p.classList.add('aiDisplay');
+      let span = document.createElement('span');
+      span.classList.add('ai');
+      let ai = (scanObj.ol[i].ai == undefined) ? '' : scanObj.ol[i].ai;
+      span.appendChild(document.createTextNode(ai));
+      p.appendChild(span);
+      span = document.createElement('span');
+      span.classList.add('aiLabel');
+      label = (scanObj.ol[i].label == undefined) ? '' : scanObj.ol[i].label;
+      span.appendChild(document.createTextNode(label));
+      p.appendChild(span);
+      span = document.createElement('span');
+      p.appendChild(span);
+      span = document.createElement('span');
+      span.classList.add('aiValue');
+      let v = (scanObj.ol[i].value == undefined) ? '' : scanObj.ol[i].value;
+      span.appendChild(document.createTextNode(v));
+      p.appendChild(span);
+      div.appendChild(p);
+    }
+    outputNode.appendChild(div);
+
+    // Now we want to show the different formats of the scanned string.
+
+    label = document.createElement('label');
+    label.htmlFor = 'syntaxes';
+    label.classList.add('sectionHeader');
+    label.appendChild(document.createTextNode('Equivalent identifiers'));
+    outputNode.appendChild(label);
+    div = document.createElement('div');
+    div.id = 'syntaxes';
+    let p = document.createElement('p');
+    label = document.createElement('label');
+    label.htmlFor = 'aiBrackets';
+    label.appendChild(document.createTextNode('Human-readable AI syntax'));
+    let span = document.createElement('span');
+    span.classList.add('syntax');
+    span.id = 'aiBrackets';
+    span.appendChild(document.createTextNode(scanObj.AIbrackets));
+    p.appendChild(label);
+    p.appendChild(span);
+    div.appendChild(p);
+
+    p = document.createElement('p');
+    label = document.createElement('label');
+    label.htmlFor = 'aiFNC1';
+    label.appendChild(document.createTextNode('Native AI syntax'));
+    span = document.createElement('span');
+    span.classList.add('syntax');
+    span.id = 'aiFNC1';
+    span.appendChild(document.createTextNode(scanObj.AIfnc1));
+    p.appendChild(label);
+    p.appendChild(span);
+    div.appendChild(p);
+
+    p = document.createElement('p');
+    label = document.createElement('label');
+    label.htmlFor = 'dl';
+    label.appendChild(document.createTextNode('GS1 Digital Link'));
+    span = document.createElement('span');
+    span.classList.add('syntax');
+    span.id = 'dl';
+    let a = document.createElement('a');
+    a.href = scanObj.dl;
+    a.appendChild(document.createTextNode(scanObj.dl));
+    span.appendChild(a);
+    p.appendChild(label);
+    p.appendChild(span);
+    div.appendChild(p);
+
+    outputNode.appendChild(div);
+  }
+}
+
+

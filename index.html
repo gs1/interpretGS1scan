@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width">
+    <title>Is it a GS1 Digital Link URI? What does it contain?</title>
+    <script src="https://gs1.github.io/GS1DigitalLinkCompressionPrototype/src/GS1DigitalLinkToolkit.js"></script>
+    <script src="https://gs1.github.io/interpretGS1scan/interpretGS1Scan.js"></script>
+    <link rel="stylesheet" href="https://gs1.github.io/interpretGS1scan/interpretGS1scanStyles.css" />
+  </head>
+  <style type="text/css">
+    body {font-family: sans-serif}
+    h1, h2 {color:#235EA4}
+
+    #titleSelector, #interpretation {
+      margin:1em;
+      padding: 1em;
+      border: thin solid gray;
+    }
+
+    #titleSelector label {
+      width:7em;
+      display: inline-block;
+    }
+
+
+    #footnotes {
+      margin-top:2em;
+    }
+  </style>
+  <body>
+<h1>Is it a GS1 Digital Link URI? What does it contain?</h1>
+<main>
+<p>This tool is designed to show that it is simple to determine whether a given URL could be a GS1 Digital Link URI and therefore whether it is worth continuing to process as such. If so, it then interprets the URI and shows what GS1 identifiers are present and their values.</p>
+<p>It begins by carrying out two tests:</p><ol>
+<li>Does the input string match the general pattern of an https URI?</li>
+<li>If so, does one of the the path elements include one of the GS1 Primary Keys in either textual or numeric form?</li>
+</ol><p>If the input matches both of these conditions the it would be worth passing to the <a href="https://github.com/gs1/GS1DigitalLinkToolkit.js">GS1 Digital Link toolkit</a> for further processing. Note that the Digital Link toolkit provides a much more robust test as to whether the input URI conforms to the standard syntax.</p>
+<section id="titleSelector">
+  <p><label for="url">URL to test <span id="egSpan">(<a href="javascript:void(0);" id="egA">sample</a>)</span></label> <input type="text" size="53" id="url" /></p>
+  <p style="padding-left:7.3em"><button id="test">Test</button></p>
+  <p id="report"></p>
+</section>
+<section id="interpretation"></section>
+
+
+<section id="footnotes">
+<h2>Notes</h2>
+<p>For those interested, the primary regular expression is:</p>
+<p><code>^https:(\/\/((([^\/?#]*)@)?([^\/?#:]*)(:([^\/?#]*))?))?([^?#]*)(\?([^#]*))?(#(.*))?</code></p>
+<p>This is slightly modified from <a href="https://www.w3.org/TR/powder-grouping/#rabinsRegEx">one created by Jo Rabin</a> many years ago.</p>
+<p>Variable 8 from that regex is the path which we split on the / character and then just look to make sure that one of the path elements exactly matches one of the primary keys using this array:</p>
+<p><code>['01','gtin','8006','itip','8013','gmn','8010','cpid','410','shipTo','411','billTo','412','purchasedFrom','413','shipFor','414','gln','415','payTo','416','glnProd','417','party','8017','gsrnp','8018','gsrn','255','gcn','00','sscc','253','gdti','401','ginc','402','gsin','8003','grai','8004','giai']</code></p>
+</section>
+
+</main>
+</body>
+<script>
+
+// #############################################
+// Just a few bits to make the demo Web page work
+
+  window.onload=init;
+
+  function init() {
+    document.getElementById("test").addEventListener('click', showDetails);
+    document.getElementById("egA").addEventListener('click', function() {document.getElementById('url').value='https://id.gs1.org/01/9506000134352/10/ABC/21/123456'});
+  }
+
+  function showDetails() {
+    var result = new Array(); let url;
+    if (url = document.getElementById("url").value) {result = extractDetails(url)}
+    let r = document.getElementById('report');
+    let interpretationSection = document.getElementById('interpretation');
+    interpretationSection.innerHTML = '';
+    r.innerHTML = url;
+    r.innerHTML += result.isURL ? ' is a valid https URL' : ' is not a valid https URL and so cannot be a valid GS1 Digital Link URI';
+    r.innerHTML += '<br />';
+    if (result.isLikelyDL) { r.innerHTML += 'it is also likely to be a GS1 Digital Link URI'}
+    if ((result.isURL) && (!result.isLikelyDL)) { r.innerHTML += ' but is not a valid GS1 Digital Link URI'}
+    if ((result.isURL) && (result.isLikelyDL)) {
+      displayInterpretation(url, interpretationSection);
+    }
+  }
+
+
+function extractDetails(url) {
+//  ##############################################
+// Here's the basic regex we're using that matches any URI
+
+//  /^(([^:\/?#]+):)?(\/\/((([^\/?#]*)@)?([^\/?#:]*)(:([^\/?#]*))?))?([^?#]*)(\?([^#]*))?(#(.*))?/;
+
+// However, we know that for DL it MUST be https so we can simplify it a little
+
+  let httpURIre = /^https:(\/\/((([^\/?#]*)@)?([^\/?#:]*)(:([^\/?#]*))?))?([^?#]*)(\?([^#]*))?(#(.*))?/;
+
+  let domain = 5
+  let path = 8;
+  let port = 7;
+  let query = 10;
+  let frag = 12;
+
+  let e; let f;
+  let op = {'isURL' : false, 'isLikelyDl' : false}; 
+
+  if (e = url.match(httpURIre)) {
+    console.log('Match for ' + url);
+    op.isURL = true;
+    if (testPath(e[path])) {
+      op.isLikelyDL = true;
+    }
+  }
+  return op;
+}
+
+// We want to look at the path in more detail. It can begin with any number of segments but once it gets to a GS1 key, it must follow the stucture.
+// We'll split the path on the / character
+// To go further requires a lot more processing as provided by the Digital Link Toolkit but as a first approximation, if we have:
+// 1. An https URI
+// 2. one of those as a path element
+// Then the chances of it being a DL are high enough to warrant that further processing.
+
+
+function testPath(p) {
+  let validPathSegs = ['01','gtin','8006','itip','8013','gmn','8010','cpid','410','shipTo','411','billTo','412','purchasedFrom','413','shipFor','414','gln','415','payTo','416','glnProd','417','party','8017','gsrnp','8018','gsrn','255','gcn','00','sscc','253','gdti','401','ginc','402','gsin','8003','grai','8004','giai'];
+  let pathElems = p.split('/');
+  for (i = 1; i < pathElems.length; i++) {
+    if (validPathSegs.includes(pathElems[i])) {
+      return true;   // Breaks the loop here if it finds a match
+    }
+  }
+  return false;
+}
+
+
+</script>
+
+</html>
