@@ -94,7 +94,7 @@ function interpretScan(scan) {
         done.push(i);
       }
     });
-    //console.log(orderedAIlist); // These are the ones we have already got. We need to get the rest but these can be in any order
+    //console.log(dlOrderedAIlist); // These are the ones we have already got. We need to get the rest but these can be in any order
     for (i in gs1Array.GS1) {
       if (!done.includes(i)) {
         dlOrderedAIlist.push(getAIElement(i, gs1dlt, gs1Array.GS1, dateAIs));
