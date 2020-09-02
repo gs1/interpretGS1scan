@@ -70,7 +70,7 @@
 
   function showDetails() {
     var result = new Array(); let url;
-    if (url = document.getElementById("url").value) {result = extractDetails(url)}
+    if (url = document.getElementById("url").value) {result = urlCheck(url)}
     let r = document.getElementById('report');
     let interpretationSection = document.getElementById('interpretation');
     interpretationSection.innerHTML = '';
@@ -79,13 +79,13 @@
     r.innerHTML += '<br />';
     if (result.isPlausibleDL) { r.innerHTML += 'it is also plausibly a GS1 Digital Link URI'}
     if ((result.isURL) && (!result.isLikelyDL)) { r.innerHTML += ' but is not a valid GS1 Digital Link URI'}
-    if ((result.isURL) && (result.isLikelyDL)) {
+    if ((result.isURL) && (result.isPlausibleDL)) {
       displayInterpretation(url, interpretationSection);
     }
   }
 
 
-function extractDetails(url) {
+function urlCheck(url) {
 //  ##############################################
 // Here's the basic regex we're using that matches any URI
 //  /^(([^:\/?#]+):)?(\/\/((([^\/?#]*)@)?([^\/?#:]*)(:([^\/?#]*))?))?([^?#]*)(\?([^#]*))?(#(.*))?/;
@@ -97,11 +97,9 @@ function extractDetails(url) {
   let op = {'isURL' : false, 'isPlausibleDl' : false};
 
   if (e = url.match(httpURIre)) {
-    console.log('Match for ' + url);
+    // console.log('Match for ' + url);
     op.isURL = true;
-    if (isPlausibleGs1DlUri(e)) {
-      op.isPlausibleDL = true;
-    }
+    op.isPlausibleDL = isPlausibleGs1DlUri(e[0]); // Uses function in interpretGS1Scan.js
   }
   return op;
 }

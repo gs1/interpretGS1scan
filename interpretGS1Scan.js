@@ -88,7 +88,6 @@ function interpretScan(scan) {
     scan = scan.substring(1);
     console.log('We have this ' + scan);
   }
-
   try {
     gs1dlt = new GS1DigitalLinkToolkit();
     if (isPlausibleGs1DlUri(scan)) {
