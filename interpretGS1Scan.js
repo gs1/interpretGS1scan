@@ -29,14 +29,60 @@
 
 */
 
+/* This first mini function tests the incoming string against the monster regular expression that assesses whether the incoming string is plausibly a GS1 DL URI
+It DOES NOT guarantee that a true response *is* is GS1 DL URI, but will reject a lot that it knows to be false.
+This RegEx is included in version 1.2 of Digital Link: URI Syntax. All improvements welcome.
+
+The initial pattern matches the structure of a URL (http or https) including the little-used but possible inclusion of passwords and port numbers.
+
+^https?:(\/\/((([^\/?#]*)@)?([^\/?#:]*)(:([^\/?#]*))?))?
+
+Next we want to test for the presence of a path component containing a primary key (which may follow aribitrary other path segments). This can be either in its numeric form or its convenience string equivalent. We further want to test that the path segment following the primary key:
+
+•	Is a string beginning with at least 4 digits.
+•	Is followed optionally zero or more repetitions of:
+  o	a literal forward slash;
+  o	one or more characters of which none are a literal forward slash;
+  o	another literal forward slash;
+  o	one or more characters of which none are a literal forward slash.
+
+Furthermore:
+
+•	A trailing forward slash is allowed at the end of the URI path info (strictly speaking forbidden by the ABNF grammar for DL but is tolerable)
+•	Anything following the path is within the structure of a URL with a query string and fragment identifier.
+
+These rules are expressed in the following pattern
+
+([^?#]*)(\/(01|gtin|8006|itip|8013|gmn|8010|cpid|414|gln|417|party|8017|gsrnp|8018|gsrn|255|gcn|00|sscc|253|gdti|401|ginc|402|gsin|8003|grai|8004|giai)\/)(\d{4}[^\/]+)(\/[^/]+\/[^/]+)?[/]?(\?([^?\n]*))?(#([^\n]*))?
+
+A final complexity is that a GS1 DL URI may be compressed [DL-Compression]. The path of a compressed GS1 DL URI will:
+
+•	Contain at least 10 characters from the base 64 safe set (digits, upper and lower case Latin letters, _ -)
+•	No other characters (including path separators, querystrings and fragments)
+
+These features are tested by
+
+\/[0-9A-Za-z_-]{10}$
+
+Therefore, the path of a GS1 DL URI will match either of the previous two patterns.
+
+Concatenating these gives the full RegEx.
+*/
+
+const plausibleGs1DlUriRegEx = /^https?:(\/\/((([^\/?#]*)@)?([^\/?#:]*)(:([^\/?#]*))?))?((([^?#]*)(\/(01|gtin|8006|itip|8013|gmn|8010|cpid|414|gln|417|party|8017|gsrnp|8018|gsrn|255|gcn|00|sscc|253|gdti|401|ginc|402|gsin|8003|grai|8004|giai)\/)(\d{4}[^\/]+)(\/[^/]+\/[^/]+)?[/]?(\?([^?\n]*))?(#([^\n]*))?)|(\/[A-Za-z_-]{10}$))/;
+
+function isPlausibleGs1DlUri(s) {
+  return plausibleGs1DlUriRegEx.test(s);
+}
+
+
 function interpretScan(scan) {
-  let httpURIre = /^https:(\/\/((([^\/?#]*)@)?([^\/?#:]*)(:([^\/?#]*))?))?([^?#]*)(\?([^#]*))?(#(.*))?/;
   let gtinRE = /^(\d{8})$|^(\d{12,14})$/;
   let e, gs1DigitalLinkURI, gs1ElementStrings, gs1Array, primaryKey, AIstringBrackets, AIstringFNC1, errmsg, gs1dlt;
   let dlOrderedAIlist = [];
   let dateAIs = ['11', '12', '13', '15', '17'];
 
-  if (e = scan.match(gtinRE)) {
+  if (e = scan.match(gtinRE)) {  // So we just have a GTIN (from an EAN/UPC probably)
     scan = '(01)' + scan;
   } else if (scan.indexOf(String.fromCharCode(29)) == 0) {
     scan = scan.substring(1);
@@ -45,7 +91,7 @@ function interpretScan(scan) {
 
   try {
     gs1dlt = new GS1DigitalLinkToolkit();
-    if (e = scan.match(httpURIre)) {
+    if (isPlausibleGs1DlUri(scan)) {
       try {
       	gs1ElementStrings = gs1dlt.gs1digitalLinkToGS1elementStrings(scan, true);
         gs1DigitalLinkURI = scan;

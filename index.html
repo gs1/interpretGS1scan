@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width">
     <title>Is it a GS1 Digital Link URI? What does it contain?</title>
     <script src="https://gs1.github.io/GS1DigitalLinkCompressionPrototype/src/GS1DigitalLinkToolkit.js"></script>
-    <script src="https://gs1.github.io/interpretGS1scan/interpretGS1Scan.js"></script>
+<!--    <script src="https://gs1.github.io/interpretGS1scan/interpretGS1Scan.js"></script>-->
+    <script src="interpretGS1Scan.js"></script>
     <link rel="stylesheet" href="https://gs1.github.io/interpretGS1scan/interpretGS1ScanStyles.css" />
   </head>
   <style type="text/css">
@@ -46,11 +47,11 @@
 
 <section id="footnotes">
 <h2>Notes</h2>
-<p>For those interested, the primary regular expression is:</p>
-<p><code>^https:(\/\/((([^\/?#]*)@)?([^\/?#:]*)(:([^\/?#]*))?))?([^?#]*)(\?([^#]*))?(#(.*))?</code></p>
-<p>This is slightly modified from <a href="https://www.w3.org/TR/powder-grouping/#rabinsRegEx">one created by Jo Rabin</a> many years ago.</p>
-<p>Variable 8 from that regex is the path which we split on the / character and then just look to make sure that one of the path elements exactly matches one of the primary keys using this array:</p>
-<p><code>['01','gtin','8006','itip','8013','gmn','8010','cpid','410','shipTo','411','billTo','412','purchasedFrom','413','shipFor','414','gln','415','payTo','416','glnProd','417','party','8017','gsrnp','8018','gsrn','255','gcn','00','sscc','253','gdti','401','ginc','402','gsin','8003','grai','8004','giai']</code></p>
+<p>For those interested, the primary regular expression (which is included in the interpretGS1Scan library) is:</p>
+<p><code>/^https?:(\/\/((([^\/?#]*)@)?([^\/?#:]*)(:([^\/?#]*))?))?((([^?#]*)(\/(01|gtin|8006|itip|8013|gmn|8010|cpid|414|gln|417|party|8017|gsrnp|8018|gsrn|255|gcn|00|sscc|253|gdti|401|ginc|402|gsin|8003|grai|8004|giai)\/)(\d{4}[^\/]+)(\/[^/]+\/[^/]+)?[/]?(\?([^?\n]*))?(#([^\n]*))?)|(\/[A-Za-z_-]{10}$))/</code></p>
+
+<p>This is included in version 1.2 of the GS1 Digital Link standard (URI syntax) - and is very much open to improvement.</p>
+
 </section>
 
 </main>
@@ -76,7 +77,7 @@
     r.innerHTML = url;
     r.innerHTML += result.isURL ? ' is a valid https URL' : ' is not a valid https URL and so cannot be a valid GS1 Digital Link URI';
     r.innerHTML += '<br />';
-    if (result.isLikelyDL) { r.innerHTML += 'it is also likely to be a GS1 Digital Link URI'}
+    if (result.isPlausibleDL) { r.innerHTML += 'it is also plausibly a GS1 Digital Link URI'}
     if ((result.isURL) && (!result.isLikelyDL)) { r.innerHTML += ' but is not a valid GS1 Digital Link URI'}
     if ((result.isURL) && (result.isLikelyDL)) {
       displayInterpretation(url, interpretationSection);
@@ -87,49 +88,22 @@
 function extractDetails(url) {
 //  ##############################################
 // Here's the basic regex we're using that matches any URI
-
 //  /^(([^:\/?#]+):)?(\/\/((([^\/?#]*)@)?([^\/?#:]*)(:([^\/?#]*))?))?([^?#]*)(\?([^#]*))?(#(.*))?/;
-
 // However, we know that for DL it MUST be https so we can simplify it a little
 
   let httpURIre = /^https:(\/\/((([^\/?#]*)@)?([^\/?#:]*)(:([^\/?#]*))?))?([^?#]*)(\?([^#]*))?(#(.*))?/;
 
-  let domain = 5
-  let path = 8;
-  let port = 7;
-  let query = 10;
-  let frag = 12;
-
-  let e; let f;
-  let op = {'isURL' : false, 'isLikelyDl' : false}; 
+  let e;
+  let op = {'isURL' : false, 'isPlausibleDl' : false};
 
   if (e = url.match(httpURIre)) {
     console.log('Match for ' + url);
     op.isURL = true;
-    if (testPath(e[path])) {
-      op.isLikelyDL = true;
+    if (isPlausibleGs1DlUri(e)) {
+      op.isPlausibleDL = true;
     }
   }
   return op;
-}
-
-// We want to look at the path in more detail. It can begin with any number of segments but once it gets to a GS1 key, it must follow the stucture.
-// We'll split the path on the / character
-// To go further requires a lot more processing as provided by the Digital Link Toolkit but as a first approximation, if we have:
-// 1. An https URI
-// 2. one of those as a path element
-// Then the chances of it being a DL are high enough to warrant that further processing.
-
-
-function testPath(p) {
-  let validPathSegs = ['01','gtin','8006','itip','8013','gmn','8010','cpid','410','shipTo','411','billTo','412','purchasedFrom','413','shipFor','414','gln','415','payTo','416','glnProd','417','party','8017','gsrnp','8018','gsrn','255','gcn','00','sscc','253','gdti','401','ginc','402','gsin','8003','grai','8004','giai'];
-  let pathElems = p.split('/');
-  for (i = 1; i < pathElems.length; i++) {
-    if (validPathSegs.includes(pathElems[i])) {
-      return true;   // Breaks the loop here if it finds a match
-    }
-  }
-  return false;
 }
 
 
