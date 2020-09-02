@@ -47,7 +47,7 @@
 <section id="footnotes">
 <h2>Notes</h2>
 <p>For those interested, the primary regular expression (which is included in the interpretGS1Scan library) is:</p>
-<p><code>/^https?:(\/\/((([^\/?#]*)@)?([^\/?#:]*)(:([^\/?#]*))?))?((([^?#]*)(\/(01|gtin|8006|itip|8013|gmn|8010|cpid|414|gln|417|party|8017|gsrnp|8018|gsrn|255|gcn|00|sscc|253|gdti|401|ginc|402|gsin|8003|grai|8004|giai)\/)(\d{4}[^\/]+)(\/[^/]+\/[^/]+)?[/]?(\?([^?\n]*))?(#([^\n]*))?)|(\/[A-Za-z_-]{10}$))/</code></p>
+<p><code>/^https?:(\/\/((([^\/?#]*)@)?([^\/?#:]*)(:([^\/?#]*))?))?((([^?#]*)(\/(01|gtin|8006|itip|8013|gmn|8010|cpid|414|gln|417|party|8017|gsrnp|8018|gsrn|255|gcn|00|sscc|253|gdti|401|ginc|402|gsin|8003|grai|8004|giai)\/)(\d{4}[^\/]+)(\/[^/]+\/[^/]+)?[/]?(\?([^?\n]*))?(#([^\n]*))?)|(\/[0-9A-Za-z_-]{10,}$))/</code></p>
 
 <p>This is included in version 1.2 of the GS1 Digital Link standard (URI syntax) - and is very much open to improvement.</p>
 
@@ -74,7 +74,7 @@
     let interpretationSection = document.getElementById('interpretation');
     interpretationSection.innerHTML = '';
     r.innerHTML = url;
-    r.innerHTML += result.isURL ? ' is a valid https URL' : ' is not a valid https URL and so cannot be a valid GS1 Digital Link URI';
+    r.innerHTML += result.isURL ? ' is a valid https URL' : ' is not a valid URL and so cannot be a valid GS1 Digital Link URI';
     r.innerHTML += '<br />';
     if (result.isPlausibleDL) { r.innerHTML += 'it is also plausibly a GS1 Digital Link URI'}
     if ((result.isURL) && (!result.isLikelyDL)) { r.innerHTML += ' but is not a valid GS1 Digital Link URI'}
@@ -88,9 +88,9 @@ function urlCheck(url) {
 //  ##############################################
 // Here's the basic regex we're using that matches any URI
 //  /^(([^:\/?#]+):)?(\/\/((([^\/?#]*)@)?([^\/?#:]*)(:([^\/?#]*))?))?([^?#]*)(\?([^#]*))?(#(.*))?/;
-// However, we know that for DL it MUST be https so we can simplify it a little
+// However, we know that for DL it MUST be http or https so we can simplify it a little
 
-  let httpURIre = /^https:(\/\/((([^\/?#]*)@)?([^\/?#:]*)(:([^\/?#]*))?))?([^?#]*)(\?([^#]*))?(#(.*))?/;
+  let httpURIre = /^https?:(\/\/((([^\/?#]*)@)?([^\/?#:]*)(:([^\/?#]*))?))?([^?#]*)(\?([^#]*))?(#(.*))?/;
 
   let e;
   let op = {'isURL' : false, 'isPlausibleDl' : false};
