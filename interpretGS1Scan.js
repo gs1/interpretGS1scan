@@ -71,6 +71,11 @@ Concatenating these gives the full RegEx.
 
 const plausibleGs1DlUriRegEx = /^https?:(\/\/((([^\/?#]*)@)?([^\/?#:]*)(:([^\/?#]*))?))?((([^?#]*)(\/(01|gtin|8006|itip|8013|gmn|8010|cpid|414|gln|417|party|8017|gsrnp|8018|gsrn|255|gcn|00|sscc|253|gdti|401|ginc|402|gsin|8003|grai|8004|giai)\/)(\d{4}[^\/]+)(\/[^/]+\/[^/]+)?[/]?(\?([^?\n]*))?(#([^\n]*))?)|(\/[0-9A-Za-z_-]{10,}$))/;
 
+const plausibleCompressedGs1DlUriRegEx = /^https?:(\/\/((([^\/?#]*)@)?([^\/?#:]*)(:([^\/?#]*))?))?\/[0-9A-Za-z_-]{10,}$/;
+
+
+
+
 function isPlausibleGs1DlUri(s) {
   return plausibleGs1DlUriRegEx.test(s);
 }
@@ -91,6 +96,9 @@ function interpretScan(scan) {
   try {
     gs1dlt = new GS1DigitalLinkToolkit();
     if (isPlausibleGs1DlUri(scan)) {
+      if (plausibleCompressedGs1DlUriRegEx.test(scan)) {
+        scan = gs1dlt.decompressGS1DigitalLink(scan,false,'https://id.gs1.org');  // Decompress if it's likely to be compressed
+      }
       try {
       	gs1ElementStrings = gs1dlt.gs1digitalLinkToGS1elementStrings(scan, true);
         gs1DigitalLinkURI = scan;

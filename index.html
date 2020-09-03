@@ -37,7 +37,7 @@
 <li>If so, does one of the the path elements include one of the GS1 Primary Keys in either textual or numeric form?</li>
 </ol><p>If the input matches both of these conditions the it would be worth passing to the <a href="https://github.com/gs1/GS1DigitalLinkToolkit.js">GS1 Digital Link toolkit</a> for further processing. Note that the Digital Link toolkit provides a much more robust test as to whether the input URI conforms to the standard syntax.</p>
 <section id="titleSelector">
-  <p><label for="url">URL to test <span id="egSpan">(<a href="javascript:void(0);" id="egA">sample</a>)</span></label> <input type="text" size="53" id="url" /></p>
+  <p><label for="url">URL to test <span id="egSpan"><a href="javascript:void(0);" id="egA">sample 1</a> <a href="javascript:void(0);" id="egB">sample 2</a></span></label> <input type="text" size="53" id="url" /></p>
   <p style="padding-left:7.3em"><button id="test">Test</button></p>
   <p id="report"></p>
 </section>
@@ -65,6 +65,7 @@
   function init() {
     document.getElementById("test").addEventListener('click', showDetails);
     document.getElementById("egA").addEventListener('click', function() {document.getElementById('url').value='https://id.gs1.org/01/9506000134352/10/ABC/21/123456'});
+    document.getElementById("egB").addEventListener('click', function() {document.getElementById('url').value='http://example.org/ARFKk4XBoCCHV4Qgw8SA'});
   }
 
   function showDetails() {
@@ -74,10 +75,10 @@
     let interpretationSection = document.getElementById('interpretation');
     interpretationSection.innerHTML = '';
     r.innerHTML = url;
-    r.innerHTML += result.isURL ? ' is a valid https URL' : ' is not a valid URL and so cannot be a valid GS1 Digital Link URI';
+    r.innerHTML += result.isURL ? ' is a valid URL' : ' is not a valid URL and so cannot be a valid GS1 Digital Link URI';
     r.innerHTML += '<br />';
     if (result.isPlausibleDL) { r.innerHTML += 'it is also plausibly a GS1 Digital Link URI'}
-    if ((result.isURL) && (!result.isLikelyDL)) { r.innerHTML += ' but is not a valid GS1 Digital Link URI'}
+    if ((result.isURL) && (!result.isPlausibleDL)) { r.innerHTML += ' but is not a valid GS1 Digital Link URI'}
     if ((result.isURL) && (result.isPlausibleDL)) {
       displayInterpretation(url, interpretationSection);
     }
