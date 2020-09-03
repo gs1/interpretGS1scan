@@ -324,7 +324,7 @@ function displayInterpretation(scan, outputNode) {
     p = document.createElement('p');
     label = document.createElement('label');
     label.htmlFor = 'dl';
-    label.appendChild(document.createTextNode('GS1 Digital Link'));
+    label.appendChild(document.createTextNode('Canonical GS1 Digital Link'));
     span = document.createElement('span');
     span.classList.add('syntax');
     span.id = 'dl';
