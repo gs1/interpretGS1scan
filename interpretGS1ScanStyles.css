@@ -1,5 +1,5 @@
 p.aiDisplay span.ai {
-  width: 2em;
+  width: 4em;
 }
 
 p.aiDisplay span.aiLabel {
@@ -7,7 +7,7 @@ p.aiDisplay span.aiLabel {
 }
 
 div#syntaxes p label {
-  width:14em;
+  width:16em;
   font-weight: normal;
 }
 

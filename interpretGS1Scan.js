@@ -137,16 +137,19 @@ function interpretScan(scan) {
     for (i in gs1Array.GS1) {
       if (gs1dlt.aitable.find(x => x.ai === i).type === 'I') {
         primaryKey = i;
+        console.log('Primary key is ' + primaryKey);
         dlOrderedAIlist.push(getAIElement(i, gs1dlt, gs1Array.GS1, dateAIs));
         done.push(i);
       }
     }
-    gs1dlt.aiQualifiers[primaryKey].forEach(function(i) {
-      if (gs1Array.GS1[i] !== undefined) {
-        dlOrderedAIlist.push(getAIElement(i, gs1dlt, gs1Array.GS1, dateAIs));
-        done.push(i);
-      }
-    });
+    if (gs1dlt.aiQualifiers[primaryKey] !== undefined) {
+      gs1dlt.aiQualifiers[primaryKey].forEach(function(i) {
+        if (gs1Array.GS1[i] !== undefined) {
+          dlOrderedAIlist.push(getAIElement(i, gs1dlt, gs1Array.GS1, dateAIs));
+          done.push(i);
+        }
+      });
+    }
     //console.log(dlOrderedAIlist); // These are the ones we have already got. We need to get the rest but these can be in any order
     for (i in gs1Array.GS1) {
       if (!done.includes(i)) {
@@ -324,7 +327,7 @@ function displayInterpretation(scan, outputNode) {
     p = document.createElement('p');
     label = document.createElement('label');
     label.htmlFor = 'dl';
-    label.appendChild(document.createTextNode('Canonical GS1 Digital Link'));
+    label.appendChild(document.createTextNode('GS1 Digital Link URI'));
     span = document.createElement('span');
     span.classList.add('syntax');
     span.id = 'dl';
