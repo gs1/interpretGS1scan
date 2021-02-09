@@ -1,6 +1,12 @@
 /* 
   A set of functions for interpreting the string of data in various GS1 formats, as found in barcodes of different types
-  It depends on the GS1 Digital Link toolkit
+
+  Dependecies:
+    The GS1 Digital Link toolkit
+    plausibleGS1DL
+
+  Please note that the interpret scan function works for element syntax as well as GS1 Digital Link
+
   If there are no errors, the interpretScan function returns an object as follows
 
   AIbrackets: The equivalent GS1 element string in human-readable AI syntax
@@ -29,58 +35,6 @@
 
 */
 
-/* This first mini function tests the incoming string against the monster regular expression that assesses whether the incoming string is plausibly a GS1 DL URI
-It DOES NOT guarantee that a true response *is* is GS1 DL URI, but will reject a lot that it knows to be false.
-This RegEx is included in version 1.2 of Digital Link: URI Syntax. All improvements welcome.
-
-The initial pattern matches the structure of a URL (http or https) including the little-used but possible inclusion of passwords and port numbers.
-
-^https?:(\/\/((([^\/?#]*)@)?([^\/?#:]*)(:([^\/?#]*))?))?
-
-Next we want to test for the presence of a path component containing a primary key (which may follow aribitrary other path segments). This can be either in its numeric form or its convenience string equivalent. We further want to test that the path segment following the primary key:
-
-•	Is a string beginning with at least 4 digits.
-•	Is followed optionally zero or more repetitions of:
-  o	a literal forward slash;
-  o	one or more characters of which none are a literal forward slash;
-  o	another literal forward slash;
-  o	one or more characters of which none are a literal forward slash.
-
-Furthermore:
-
-•	A trailing forward slash is allowed at the end of the URI path info (strictly speaking forbidden by the ABNF grammar for DL but is tolerable)
-•	Anything following the path is within the structure of a URL with a query string and fragment identifier.
-
-These rules are expressed in the following pattern
-
-([^?#]*)(\/(01|gtin|8006|itip|8013|gmn|8010|cpid|414|gln|417|party|8017|gsrnp|8018|gsrn|255|gcn|00|sscc|253|gdti|401|ginc|402|gsin|8003|grai|8004|giai)\/)(\d{4}[^\/]+)(\/[^/]+\/[^/]+)?[/]?(\?([^?\n]*))?(#([^\n]*))?
-
-A final complexity is that a GS1 DL URI may be compressed [DL-Compression]. The path of a compressed GS1 DL URI will:
-
-•	Contain at least 10 characters from the base 64 safe set (digits, upper and lower case Latin letters, _ -)
-•	No other characters (including path separators, querystrings and fragments)
-
-These features are tested by
-
-\/[0-9A-Za-z_-]{10,}$
-
-Therefore, the path of a GS1 DL URI will match either of the previous two patterns.
-
-Concatenating these gives the full RegEx.
-*/
-
-const plausibleGs1DlUriRegEx = /^https?:(\/\/((([^\/?#]*)@)?([^\/?#:]*)(:([^\/?#]*))?))?((([^?#]*)(\/(01|gtin|8006|itip|8013|gmn|8010|cpid|414|gln|417|party|8017|gsrnp|8018|gsrn|255|gcn|00|sscc|253|gdti|401|ginc|402|gsin|8003|grai|8004|giai)\/)(\d{4}[^\/]+)(\/[^/]+\/[^/]+)?[/]?(\?([^?\n]*))?(#([^\n]*))?)|(\/[0-9A-Za-z_-]{10,}$))/;
-
-const plausibleCompressedGs1DlUriRegEx = /^https?:(\/\/((([^\/?#]*)@)?([^\/?#:]*)(:([^\/?#]*))?))?\/[0-9A-Za-z_-]{10,}$/;
-
-
-
-
-function isPlausibleGs1DlUri(s) {
-  return plausibleGs1DlUriRegEx.test(s);
-}
-
-
 function interpretScan(scan) {
   let gtinRE = /^(\d{8})$|^(\d{12,14})$/;
   let e, gs1DigitalLinkURI, gs1ElementStrings, gs1Array, primaryKey, AIstringBrackets, AIstringFNC1, errmsg, gs1dlt;
@@ -93,12 +47,16 @@ function interpretScan(scan) {
     scan = scan.substring(1);
     console.log('We have this ' + scan);
   }
+  // Let's also see if it's a DL URI
+  let plausibleDL = isPlausibleGs1DlUri(scan);
+  // Either way, we're going to need the DL toolkit
   try {
     gs1dlt = new GS1DigitalLinkToolkit();
-    if (isPlausibleGs1DlUri(scan)) {
-      if (plausibleCompressedGs1DlUriRegEx.test(scan)) {
+    if (plausibleDL.any) {
+      if (plausibleDL.compressed) {
         scan = gs1dlt.decompressGS1DigitalLink(scan,false,'https://id.gs1.org');  // Decompress if it's likely to be compressed
       }
+      // If we're here, the input must have been a DL URI and scan must be decompressed
       try {
       	gs1ElementStrings = gs1dlt.gs1digitalLinkToGS1elementStrings(scan, true);
         gs1DigitalLinkURI = scan;
@@ -106,7 +64,7 @@ function interpretScan(scan) {
       	console.log(err);
         errmsg = err;
       }
-    } else {
+    } else {  // Hopefully scan is an element string then, which we can convert to a DL URI
       try {
       	gs1DigitalLinkURI = gs1dlt.gs1ElementStringsToGS1DigitalLink(scan, false, 'https://id.gs1.org');
       } catch(err) {
