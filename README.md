@@ -4,7 +4,8 @@
  
  # Dependency
 
-<p>Interpret GS1 scan depends on the <a href="https://github.com/gs1/GS1DigitalLinkToolkit.js">GS1 Digital Link toolkit</a>.</p>
+<p>Interpret GS1 scan depends on the <a href="https://github.com/gs1/GS1DigitalLinkToolkit.js">GS1 Digital Link toolkit</a> and the <a href="plausibleGS1DL.js">plausibleGS1DL.js</a> function. The latter includes ample documentation within the code and exists to prvide a simple way to
+determine whether a given string plausibly is, or definitely is not, a GS1 Digital Link URI.</p>
 
 # The Interpret Scan function
 
