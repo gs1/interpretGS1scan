@@ -64,9 +64,9 @@ function interpretScan(scan) {
       	console.log(err);
         errmsg = err;
       }
-    } else {  // Hopefully scan is an element string then, which we can convert to a DL URI
+    } else {  // Hopefully scan is an element string then, which we can convert to a DL URI, remembering to URL-encode first
       try {
-      	gs1DigitalLinkURI = gs1dlt.gs1ElementStringsToGS1DigitalLink(scan, false, 'https://id.gs1.org');
+      	gs1DigitalLinkURI = gs1dlt.gs1ElementStringsToGS1DigitalLink(encodeURIComponent(scan), false, 'https://id.gs1.org');
       } catch(err) {
      	  console.log(err);
         errmsg = err;
@@ -242,7 +242,7 @@ function displayInterpretation(scan, outputNode) {
       p.appendChild(span);
       span = document.createElement('span');
       span.classList.add('aiValue');
-      let v = (scanObj.ol[i].value == undefined) ? '' : scanObj.ol[i].value;
+      let v = (scanObj.ol[i].value == undefined) ? '' : decodeURIComponent(scanObj.ol[i].value);
       span.appendChild(document.createTextNode(v));
       p.appendChild(span);
       div.appendChild(p);
@@ -265,7 +265,7 @@ function displayInterpretation(scan, outputNode) {
     let span = document.createElement('span');
     span.classList.add('syntax');
     span.id = 'aiBrackets';
-    span.appendChild(document.createTextNode(scanObj.AIbrackets));
+    span.appendChild(document.createTextNode(decodeURIComponent(scanObj.AIbrackets)));
     p.appendChild(label);
     p.appendChild(span);
     div.appendChild(p);
@@ -277,7 +277,7 @@ function displayInterpretation(scan, outputNode) {
     span = document.createElement('span');
     span.classList.add('syntax');
     span.id = 'aiFNC1';
-    span.appendChild(document.createTextNode(scanObj.AIfnc1));
+    span.appendChild(document.createTextNode(decodeURIComponent(scanObj.AIfnc1)));
     p.appendChild(label);
     p.appendChild(span);
     div.appendChild(p);
