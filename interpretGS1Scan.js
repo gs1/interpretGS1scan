@@ -53,7 +53,7 @@ function interpretScan(scan) {
   try {
     gs1dlt = new GS1DigitalLinkToolkit();
     if (plausibleDL.any) {
-      if (plausibleDL.compressed) {
+      if (!plausibleDL.uncompressedWithAlphas) {
         scan = gs1dlt.decompressGS1DigitalLink(scan,false,'https://id.gs1.org');  // Decompress if it's likely to be compressed
       }
       // If we're here, the input must have been a DL URI and scan must be decompressed
@@ -66,7 +66,7 @@ function interpretScan(scan) {
       }
     } else {  // Hopefully scan is an element string then, which we can convert to a DL URI, remembering to URL-encode first
       try {
-      	gs1DigitalLinkURI = gs1dlt.gs1ElementStringsToGS1DigitalLink(encodeURIComponent(scan), false, 'https://id.gs1.org');
+      	gs1DigitalLinkURI = gs1dlt.gs1ElementStringsToGS1DigitalLink(escapeReservedCharacters(scan), false, 'https://id.gs1.org');
       } catch(err) {
      	  console.log(err);
         errmsg = err;
@@ -203,6 +203,31 @@ function gs1ToISO(gs1Date) {
   }
   return rv;
 }
+
+// encodeURIComponent is too general. In particular, it will percent-encode the FNC1 character in an element string
+// So this little function just %-encodes the ones we actually need to. There's probably a fancy way of doing this with
+// a single regex but, well... I hope you'll forgive the verbosity.
+function escapeReservedCharacters(str) {
+  str = str.replace("#", "%23");
+  str = str.replace("/", "%2F");
+  str = str.replace("%", "%25");
+  str = str.replace("&", "%26");
+  str = str.replace("+", "%2B");
+  str = str.replace(",", "%2C");
+  str = str.replace("!", "%21");
+  str = str.replace("(", "%28");
+  str = str.replace(")", "%29");
+  str = str.replace("*", "%2A");
+  str = str.replace("'", "%27");
+  str = str.replace(":", "%3A");
+  str = str.replace(";", "%3B");
+  str = str.replace("<", "%3C");
+  str = str.replace("=", "%3D");
+  str = str.replace("<", "%3E");
+  str = str.replace("?", "%3F");
+  return str;
+}
+
 
 function displayInterpretation(scan, outputNode) {
   let scanObj = interpretScan(scan);
