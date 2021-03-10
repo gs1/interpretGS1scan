@@ -40,9 +40,11 @@ function interpretScan(scan) {
   let e, gs1DigitalLinkURI, gs1ElementStrings, gs1Array, primaryKey, AIstringBrackets, AIstringFNC1, errmsg, gs1dlt;
   let dlOrderedAIlist = [];
   let dateAIs = ['11', '12', '13', '15', '17'];
+  let doNotEscape = false;
 
   if (e = scan.match(gtinRE)) {  // So we just have a GTIN (from an EAN/UPC probably)
     scan = '(01)' + scan;
+    doNotEscape = true;
   } else if (scan.indexOf(String.fromCharCode(29)) == 0) {
     scan = scan.substring(1);
     console.log('We have this ' + scan);
@@ -64,9 +66,9 @@ function interpretScan(scan) {
       	console.log(err);
         errmsg = err;
       }
-    } else {  // Hopefully scan is an element string then, which we can convert to a DL URI, remembering to URL-encode first
+    } else {  // Hopefully scan is an element string then, which we can convert to a DL URI, remembering to escape reserved characters first
       try {
-      	gs1DigitalLinkURI = gs1dlt.gs1ElementStringsToGS1DigitalLink(escapeReservedCharacters(scan), false, 'https://id.gs1.org');
+      	gs1DigitalLinkURI = doNotEscape ? gs1dlt.gs1ElementStringsToGS1DigitalLink(scan, false, 'https://id.gs1.org') : gs1dlt.gs1ElementStringsToGS1DigitalLink(escapeReservedCharacters(scan), false, 'https://id.gs1.org');
       } catch(err) {
      	  console.log(err);
         errmsg = err;
