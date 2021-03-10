@@ -34,7 +34,7 @@ determine whether a given string plausibly is, or definitely is not, a GS1 Digit
 <p>A second function, <code>displayInterpretation()</code> takes two parameters: the string (which it passes to <code>interpretScan()</code>) and the element in an HTML page to which it can write its interpretation (as a number of DOM elements).</p>
 
 <p>A basic <a href="https://gs1.github.io/interpretGS1scan/">demo is available</a>.</p>
-<!--
+
 # Scanner demo
 
 <p>You might want to head over to the <a href="https://gs1.github.io/interpretGS1scan/camera.html">scanner demo</a>.</p>
@@ -46,4 +46,4 @@ determine whether a given string plausibly is, or definitely is not, a GS1 Digit
  <p>It does not work with Chrome on iOS</p>
  <p>It does not work with Firefox on Windows</p>
  <p>We'll do what we can to improve this but a lot of it is down to the underlying libraries and the variance in implementation of the camera API across browsers and platforms.</p>
--->
+
