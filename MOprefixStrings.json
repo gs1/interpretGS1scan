@@ -1,0 +1,3116 @@
+[
+  {
+    "prefix": "0000000",
+    "mo": "Restricted Circulation Numbers"
+  },
+  {
+    "prefix": "0000001",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000002",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000003",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000004",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000005",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000006",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000007",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000008",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000009",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000010",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000011",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000012",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000013",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000014",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000015",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000016",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000017",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000018",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000019",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000020",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000021",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000022",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000023",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000024",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000025",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000026",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000027",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000028",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000029",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000030",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000031",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000032",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000033",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000034",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000035",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000036",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000037",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000038",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000039",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000040",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000041",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000042",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000043",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000044",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000045",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000046",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000047",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000048",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000049",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000050",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000051",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000052",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000053",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000054",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000055",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000056",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000057",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000058",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000059",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000060",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000061",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000062",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000063",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000064",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000065",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000066",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000067",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000068",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000069",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000070",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000071",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000072",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000073",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000074",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000075",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000076",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000077",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000078",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000079",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000080",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000081",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000082",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000083",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000084",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000085",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000086",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000087",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000088",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000089",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000090",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000091",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000092",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000093",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000094",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000095",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000096",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000097",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000098",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "0000099",
+    "mo": "GTIN-8"
+  },
+  {
+    "prefix": "00001 \u2013 00009",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "0001 \u2013 0009",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "001 \u2013 019",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "020",
+    "mo": "Used to issue Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "021",
+    "mo": "Used to issue Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "022",
+    "mo": "Used to issue Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "023",
+    "mo": "Used to issue Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "024",
+    "mo": "Used to issue Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "025",
+    "mo": "Used to issue Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "026",
+    "mo": "Used to issue Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "027",
+    "mo": "Used to issue Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "028",
+    "mo": "Used to issue Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "029",
+    "mo": "Used to issue Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "030",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "031",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "032",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "033",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "034",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "035",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "036",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "037",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "038",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "039",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "040",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a company"
+  },
+  {
+    "prefix": "041",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a company"
+  },
+  {
+    "prefix": "042",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a company"
+  },
+  {
+    "prefix": "043",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a company"
+  },
+  {
+    "prefix": "044",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a company"
+  },
+  {
+    "prefix": "045",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a company"
+  },
+  {
+    "prefix": "046",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a company"
+  },
+  {
+    "prefix": "047",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a company"
+  },
+  {
+    "prefix": "048",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a company"
+  },
+  {
+    "prefix": "049",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a company"
+  },
+  {
+    "prefix": "050",
+    "mo": "GS1 US reserved for future use"
+  },
+  {
+    "prefix": "051",
+    "mo": "GS1 US reserved for future use"
+  },
+  {
+    "prefix": "052",
+    "mo": "GS1 US reserved for future use"
+  },
+  {
+    "prefix": "053",
+    "mo": "GS1 US reserved for future use"
+  },
+  {
+    "prefix": "054",
+    "mo": "GS1 US reserved for future use"
+  },
+  {
+    "prefix": "055",
+    "mo": "GS1 US reserved for future use"
+  },
+  {
+    "prefix": "056",
+    "mo": "GS1 US reserved for future use"
+  },
+  {
+    "prefix": "057",
+    "mo": "GS1 US reserved for future use"
+  },
+  {
+    "prefix": "058",
+    "mo": "GS1 US reserved for future use"
+  },
+  {
+    "prefix": "059",
+    "mo": "GS1 US reserved for future use"
+  },
+  {
+    "prefix": "060",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "061",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "062",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "063",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "064",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "065",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "066",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "067",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "068",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "069",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "070",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "071",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "072",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "073",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "074",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "075",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "076",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "077",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "078",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "079",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "080",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "081",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "082",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "083",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "084",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "085",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "086",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "087",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "088",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "089",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "090",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "091",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "092",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "093",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "094",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "095",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "096",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "097",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "098",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "099",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "100",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "101",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "102",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "103",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "104",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "105",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "106",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "107",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "108",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "109",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "110",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "111",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "112",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "113",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "114",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "115",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "116",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "117",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "118",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "119",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "120",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "121",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "122",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "123",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "124",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "125",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "126",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "127",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "128",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "129",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "130",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "131",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "132",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "133",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "134",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "135",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "136",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "137",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "138",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "139",
+    "mo": "GS1 US"
+  },
+  {
+    "prefix": "200",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "201",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "202",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "203",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "204",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "205",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "206",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "207",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "208",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "209",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "210",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "211",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "212",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "213",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "214",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "215",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "216",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "217",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "218",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "219",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "220",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "221",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "222",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "223",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "224",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "225",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "226",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "227",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "228",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "229",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "230",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "231",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "232",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "233",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "234",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "235",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "236",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "237",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "238",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "239",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "240",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "241",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "242",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "243",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "244",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "245",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "246",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "247",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "248",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "249",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "250",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "251",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "252",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "253",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "254",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "255",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "256",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "257",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "258",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "259",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "260",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "261",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "262",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "263",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "264",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "265",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "266",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "267",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "268",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "269",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "270",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "271",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "272",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "273",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "274",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "275",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "276",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "277",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "278",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "279",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "280",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "281",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "282",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "283",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "284",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "285",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "286",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "287",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "288",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "289",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "290",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "291",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "292",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "293",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "294",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "295",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "296",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "297",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "298",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "299",
+    "mo": "Used to issue GS1 Restricted Circulation Numbers within a geographic region (MO defined)"
+  },
+  {
+    "prefix": "300",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "301",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "302",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "303",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "304",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "305",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "306",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "307",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "308",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "309",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "310",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "311",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "312",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "313",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "314",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "315",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "316",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "317",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "318",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "319",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "320",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "321",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "322",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "323",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "324",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "325",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "326",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "327",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "328",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "329",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "330",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "331",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "332",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "333",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "334",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "335",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "336",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "337",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "338",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "339",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "340",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "341",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "342",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "343",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "344",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "345",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "346",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "347",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "348",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "349",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "350",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "351",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "352",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "353",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "354",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "355",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "356",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "357",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "358",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "359",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "360",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "361",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "362",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "363",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "364",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "365",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "366",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "367",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "368",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "369",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "370",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "371",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "372",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "373",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "374",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "375",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "376",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "377",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "378",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "379",
+    "mo": "GS1 France"
+  },
+  {
+    "prefix": "380",
+    "mo": "GS1 Bulgaria"
+  },
+  {
+    "prefix": "383",
+    "mo": "GS1 Slovenija"
+  },
+  {
+    "prefix": "385",
+    "mo": "GS1 Croatia"
+  },
+  {
+    "prefix": "387",
+    "mo": "GS1 Bosnia-Herzegovina"
+  },
+  {
+    "prefix": "389",
+    "mo": "GS1 Montenegro"
+  },
+  {
+    "prefix": "400",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "401",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "402",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "403",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "404",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "405",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "406",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "407",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "408",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "409",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "410",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "411",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "412",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "413",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "414",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "415",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "416",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "417",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "418",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "419",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "420",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "421",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "422",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "423",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "424",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "425",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "426",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "427",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "428",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "429",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "430",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "431",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "432",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "433",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "434",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "435",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "436",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "437",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "438",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "439",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": "440",
+    "mo": "GS1 Germany"
+  },
+  {
+    "prefix": [
+      "450 - 459 GS1 Japan"
+    ],
+    "mo": "To be edited"
+  },
+  {
+    "prefix": "490",
+    "mo": "GS1 Japan"
+  },
+  {
+    "prefix": "491",
+    "mo": "GS1 Japan"
+  },
+  {
+    "prefix": "492",
+    "mo": "GS1 Japan"
+  },
+  {
+    "prefix": "493",
+    "mo": "GS1 Japan"
+  },
+  {
+    "prefix": "494",
+    "mo": "GS1 Japan"
+  },
+  {
+    "prefix": "495",
+    "mo": "GS1 Japan"
+  },
+  {
+    "prefix": "496",
+    "mo": "GS1 Japan"
+  },
+  {
+    "prefix": "497",
+    "mo": "GS1 Japan"
+  },
+  {
+    "prefix": "498",
+    "mo": "GS1 Japan"
+  },
+  {
+    "prefix": "499",
+    "mo": "GS1 Japan"
+  },
+  {
+    "prefix": "460",
+    "mo": "GS1 Russia"
+  },
+  {
+    "prefix": "461",
+    "mo": "GS1 Russia"
+  },
+  {
+    "prefix": "462",
+    "mo": "GS1 Russia"
+  },
+  {
+    "prefix": "463",
+    "mo": "GS1 Russia"
+  },
+  {
+    "prefix": "464",
+    "mo": "GS1 Russia"
+  },
+  {
+    "prefix": "465",
+    "mo": "GS1 Russia"
+  },
+  {
+    "prefix": "466",
+    "mo": "GS1 Russia"
+  },
+  {
+    "prefix": "467",
+    "mo": "GS1 Russia"
+  },
+  {
+    "prefix": "468",
+    "mo": "GS1 Russia"
+  },
+  {
+    "prefix": "469",
+    "mo": "GS1 Russia"
+  },
+  {
+    "prefix": "470",
+    "mo": "GS1 Kyrgyzstan"
+  },
+  {
+    "prefix": "471",
+    "mo": "GS1 Chinese Taipei"
+  },
+  {
+    "prefix": "474",
+    "mo": "GS1 Estonia"
+  },
+  {
+    "prefix": "475",
+    "mo": "GS1 Latvia"
+  },
+  {
+    "prefix": "476",
+    "mo": "GS1 Azerbaijan"
+  },
+  {
+    "prefix": "477",
+    "mo": "GS1 Lithuania"
+  },
+  {
+    "prefix": "478",
+    "mo": "GS1 Uzbekistan"
+  },
+  {
+    "prefix": "479",
+    "mo": "GS1 Sri Lanka"
+  },
+  {
+    "prefix": "480",
+    "mo": "GS1 Philippines"
+  },
+  {
+    "prefix": "481",
+    "mo": "GS1 Belarus"
+  },
+  {
+    "prefix": "482",
+    "mo": "GS1 Ukraine"
+  },
+  {
+    "prefix": "483",
+    "mo": "GS1 Turkmenistan"
+  },
+  {
+    "prefix": "484",
+    "mo": "GS1 Moldova"
+  },
+  {
+    "prefix": "485",
+    "mo": "GS1 Armenia"
+  },
+  {
+    "prefix": "486",
+    "mo": "GS1 Georgia"
+  },
+  {
+    "prefix": "487",
+    "mo": "GS1 Kazakstan"
+  },
+  {
+    "prefix": "488",
+    "mo": "GS1 Tajikistan"
+  },
+  {
+    "prefix": "489",
+    "mo": "GS1 Hong Kong, China"
+  },
+  {
+    "prefix": "500",
+    "mo": "GS1 UK"
+  },
+  {
+    "prefix": "501",
+    "mo": "GS1 UK"
+  },
+  {
+    "prefix": "502",
+    "mo": "GS1 UK"
+  },
+  {
+    "prefix": "503",
+    "mo": "GS1 UK"
+  },
+  {
+    "prefix": "504",
+    "mo": "GS1 UK"
+  },
+  {
+    "prefix": "505",
+    "mo": "GS1 UK"
+  },
+  {
+    "prefix": "506",
+    "mo": "GS1 UK"
+  },
+  {
+    "prefix": "507",
+    "mo": "GS1 UK"
+  },
+  {
+    "prefix": "508",
+    "mo": "GS1 UK"
+  },
+  {
+    "prefix": "509",
+    "mo": "GS1 UK"
+  },
+  {
+    "prefix": "520",
+    "mo": "GS1 Greece"
+  },
+  {
+    "prefix": "521",
+    "mo": "GS1 Greece"
+  },
+  {
+    "prefix": "528",
+    "mo": "GS1 Lebanon"
+  },
+  {
+    "prefix": "529",
+    "mo": "GS1 Cyprus"
+  },
+  {
+    "prefix": "530",
+    "mo": "GS1 Albania"
+  },
+  {
+    "prefix": "531",
+    "mo": "GS1 Macedonia"
+  },
+  {
+    "prefix": "535",
+    "mo": "GS1 Malta"
+  },
+  {
+    "prefix": "539",
+    "mo": "GS1 Ireland"
+  },
+  {
+    "prefix": "540",
+    "mo": "GS1 Belgium & Luxembourg"
+  },
+  {
+    "prefix": "541",
+    "mo": "GS1 Belgium & Luxembourg"
+  },
+  {
+    "prefix": "542",
+    "mo": "GS1 Belgium & Luxembourg"
+  },
+  {
+    "prefix": "543",
+    "mo": "GS1 Belgium & Luxembourg"
+  },
+  {
+    "prefix": "544",
+    "mo": "GS1 Belgium & Luxembourg"
+  },
+  {
+    "prefix": "545",
+    "mo": "GS1 Belgium & Luxembourg"
+  },
+  {
+    "prefix": "546",
+    "mo": "GS1 Belgium & Luxembourg"
+  },
+  {
+    "prefix": "547",
+    "mo": "GS1 Belgium & Luxembourg"
+  },
+  {
+    "prefix": "548",
+    "mo": "GS1 Belgium & Luxembourg"
+  },
+  {
+    "prefix": "549",
+    "mo": "GS1 Belgium & Luxembourg"
+  },
+  {
+    "prefix": "560",
+    "mo": "GS1 Portugal"
+  },
+  {
+    "prefix": "569",
+    "mo": "GS1 Iceland"
+  },
+  {
+    "prefix": "570",
+    "mo": "GS1 Denmark"
+  },
+  {
+    "prefix": "571",
+    "mo": "GS1 Denmark"
+  },
+  {
+    "prefix": "572",
+    "mo": "GS1 Denmark"
+  },
+  {
+    "prefix": "573",
+    "mo": "GS1 Denmark"
+  },
+  {
+    "prefix": "574",
+    "mo": "GS1 Denmark"
+  },
+  {
+    "prefix": "575",
+    "mo": "GS1 Denmark"
+  },
+  {
+    "prefix": "576",
+    "mo": "GS1 Denmark"
+  },
+  {
+    "prefix": "577",
+    "mo": "GS1 Denmark"
+  },
+  {
+    "prefix": "578",
+    "mo": "GS1 Denmark"
+  },
+  {
+    "prefix": "579",
+    "mo": "GS1 Denmark"
+  },
+  {
+    "prefix": "590",
+    "mo": "GS1 Poland"
+  },
+  {
+    "prefix": "594",
+    "mo": "GS1 Romania"
+  },
+  {
+    "prefix": "599",
+    "mo": "GS1 Hungary"
+  },
+  {
+    "prefix": "600",
+    "mo": "GS1 South Africa"
+  },
+  {
+    "prefix": "601",
+    "mo": "GS1 South Africa"
+  },
+  {
+    "prefix": "603",
+    "mo": "GS1 Ghana"
+  },
+  {
+    "prefix": "604",
+    "mo": "GS1 Senegal"
+  },
+  {
+    "prefix": "605",
+    "mo": "Managed by GS1 Global Office for future MO"
+  },
+  {
+    "prefix": "606",
+    "mo": "Managed by GS1 Global Office for future MO"
+  },
+  {
+    "prefix": "607",
+    "mo": "Managed by GS1 Global Office for future MO"
+  },
+  {
+    "prefix": "608",
+    "mo": "GS1 Bahrain"
+  },
+  {
+    "prefix": "609",
+    "mo": "GS1 Mauritius"
+  },
+  {
+    "prefix": "610",
+    "mo": "Managed by GS1 Global Office for future MO"
+  },
+  {
+    "prefix": "611",
+    "mo": "GS1 Morocco"
+  },
+  {
+    "prefix": "613",
+    "mo": "GS1 Algeria"
+  },
+  {
+    "prefix": "614",
+    "mo": "Managed by GS1 Global Office for future MO"
+  },
+  {
+    "prefix": "615",
+    "mo": "GS1 Nigeria"
+  },
+  {
+    "prefix": "616",
+    "mo": "GS1 Kenya"
+  },
+  {
+    "prefix": "617",
+    "mo": "GS1 Cameroon"
+  },
+  {
+    "prefix": "618",
+    "mo": "GS1 C\u00f4te d'Ivoire"
+  },
+  {
+    "prefix": "619",
+    "mo": "GS1 Tunisia"
+  },
+  {
+    "prefix": "620",
+    "mo": "GS1 Tanzania"
+  },
+  {
+    "prefix": "621",
+    "mo": "GS1 Syria"
+  },
+  {
+    "prefix": "622",
+    "mo": "GS1 Egypt"
+  },
+  {
+    "prefix": "623",
+    "mo": "GS1 Brunei"
+  },
+  {
+    "prefix": "624",
+    "mo": "GS1 Libya"
+  },
+  {
+    "prefix": "625",
+    "mo": "GS1 Jordan"
+  },
+  {
+    "prefix": "626",
+    "mo": "GS1 Iran"
+  },
+  {
+    "prefix": "627",
+    "mo": "GS1 Kuwait"
+  },
+  {
+    "prefix": "628",
+    "mo": "GS1 Saudi Arabia"
+  },
+  {
+    "prefix": "629",
+    "mo": "GS1 Emirates"
+  },
+  {
+    "prefix": "630",
+    "mo": "GS1 Qatar"
+  },
+  {
+    "prefix": "631",
+    "mo": "GS1 Namibia"
+  },
+  {
+    "prefix": "640",
+    "mo": "GS1 Finland"
+  },
+  {
+    "prefix": "641",
+    "mo": "GS1 Finland"
+  },
+  {
+    "prefix": "642",
+    "mo": "GS1 Finland"
+  },
+  {
+    "prefix": "643",
+    "mo": "GS1 Finland"
+  },
+  {
+    "prefix": "644",
+    "mo": "GS1 Finland"
+  },
+  {
+    "prefix": "645",
+    "mo": "GS1 Finland"
+  },
+  {
+    "prefix": "646",
+    "mo": "GS1 Finland"
+  },
+  {
+    "prefix": "647",
+    "mo": "GS1 Finland"
+  },
+  {
+    "prefix": "648",
+    "mo": "GS1 Finland"
+  },
+  {
+    "prefix": "649",
+    "mo": "GS1 Finland"
+  },
+  {
+    "prefix": "690",
+    "mo": "GS1 China"
+  },
+  {
+    "prefix": "691",
+    "mo": "GS1 China"
+  },
+  {
+    "prefix": "692",
+    "mo": "GS1 China"
+  },
+  {
+    "prefix": "693",
+    "mo": "GS1 China"
+  },
+  {
+    "prefix": "694",
+    "mo": "GS1 China"
+  },
+  {
+    "prefix": "695",
+    "mo": "GS1 China"
+  },
+  {
+    "prefix": "696",
+    "mo": "GS1 China"
+  },
+  {
+    "prefix": "697",
+    "mo": "GS1 China"
+  },
+  {
+    "prefix": "698",
+    "mo": "GS1 China"
+  },
+  {
+    "prefix": "699",
+    "mo": "GS1 China"
+  },
+  {
+    "prefix": "700",
+    "mo": "GS1 Norway"
+  },
+  {
+    "prefix": "701",
+    "mo": "GS1 Norway"
+  },
+  {
+    "prefix": "702",
+    "mo": "GS1 Norway"
+  },
+  {
+    "prefix": "703",
+    "mo": "GS1 Norway"
+  },
+  {
+    "prefix": "704",
+    "mo": "GS1 Norway"
+  },
+  {
+    "prefix": "705",
+    "mo": "GS1 Norway"
+  },
+  {
+    "prefix": "706",
+    "mo": "GS1 Norway"
+  },
+  {
+    "prefix": "707",
+    "mo": "GS1 Norway"
+  },
+  {
+    "prefix": "708",
+    "mo": "GS1 Norway"
+  },
+  {
+    "prefix": "709",
+    "mo": "GS1 Norway"
+  },
+  {
+    "prefix": "729",
+    "mo": "GS1 Israel"
+  },
+  {
+    "prefix": "730",
+    "mo": "GS1 Sweden"
+  },
+  {
+    "prefix": "731",
+    "mo": "GS1 Sweden"
+  },
+  {
+    "prefix": "732",
+    "mo": "GS1 Sweden"
+  },
+  {
+    "prefix": "733",
+    "mo": "GS1 Sweden"
+  },
+  {
+    "prefix": "734",
+    "mo": "GS1 Sweden"
+  },
+  {
+    "prefix": "735",
+    "mo": "GS1 Sweden"
+  },
+  {
+    "prefix": "736",
+    "mo": "GS1 Sweden"
+  },
+  {
+    "prefix": "737",
+    "mo": "GS1 Sweden"
+  },
+  {
+    "prefix": "738",
+    "mo": "GS1 Sweden"
+  },
+  {
+    "prefix": "739",
+    "mo": "GS1 Sweden"
+  },
+  {
+    "prefix": "740",
+    "mo": "GS1 Guatemala"
+  },
+  {
+    "prefix": "741",
+    "mo": "GS1 El Salvador"
+  },
+  {
+    "prefix": "742",
+    "mo": "GS1 Honduras"
+  },
+  {
+    "prefix": "743",
+    "mo": "GS1 Nicaragua"
+  },
+  {
+    "prefix": "744",
+    "mo": "GS1 Costa Rica"
+  },
+  {
+    "prefix": "745",
+    "mo": "GS1 Panama"
+  },
+  {
+    "prefix": "746",
+    "mo": "GS1 Republica Dominicana"
+  },
+  {
+    "prefix": "750",
+    "mo": "GS1 Mexico"
+  },
+  {
+    "prefix": "754",
+    "mo": "GS1 Canada"
+  },
+  {
+    "prefix": "755",
+    "mo": "GS1 Canada"
+  },
+  {
+    "prefix": "758",
+    "mo": "Managed by GS1 Global Office for future MO"
+  },
+  {
+    "prefix": "759",
+    "mo": "GS1 Venezuela"
+  },
+  {
+    "prefix": "760",
+    "mo": "GS1 Schweiz, Suisse, Svizzera"
+  },
+  {
+    "prefix": "761",
+    "mo": "GS1 Schweiz, Suisse, Svizzera"
+  },
+  {
+    "prefix": "762",
+    "mo": "GS1 Schweiz, Suisse, Svizzera"
+  },
+  {
+    "prefix": "763",
+    "mo": "GS1 Schweiz, Suisse, Svizzera"
+  },
+  {
+    "prefix": "764",
+    "mo": "GS1 Schweiz, Suisse, Svizzera"
+  },
+  {
+    "prefix": "765",
+    "mo": "GS1 Schweiz, Suisse, Svizzera"
+  },
+  {
+    "prefix": "766",
+    "mo": "GS1 Schweiz, Suisse, Svizzera"
+  },
+  {
+    "prefix": "767",
+    "mo": "GS1 Schweiz, Suisse, Svizzera"
+  },
+  {
+    "prefix": "768",
+    "mo": "GS1 Schweiz, Suisse, Svizzera"
+  },
+  {
+    "prefix": "769",
+    "mo": "GS1 Schweiz, Suisse, Svizzera"
+  },
+  {
+    "prefix": "770",
+    "mo": "GS1 Colombia"
+  },
+  {
+    "prefix": "771",
+    "mo": "GS1 Colombia"
+  },
+  {
+    "prefix": "773",
+    "mo": "GS1 Uruguay"
+  },
+  {
+    "prefix": "775",
+    "mo": "GS1 Peru"
+  },
+  {
+    "prefix": "777",
+    "mo": "GS1 Bolivia"
+  },
+  {
+    "prefix": "778",
+    "mo": "GS1 Argentina"
+  },
+  {
+    "prefix": "779",
+    "mo": "GS1 Argentina"
+  },
+  {
+    "prefix": "780",
+    "mo": "GS1 Chile"
+  },
+  {
+    "prefix": "784",
+    "mo": "GS1 Paraguay"
+  },
+  {
+    "prefix": "786",
+    "mo": "GS1 Ecuador"
+  },
+  {
+    "prefix": "789",
+    "mo": "GS1 Brasil"
+  },
+  {
+    "prefix": "790",
+    "mo": "GS1 Brasil"
+  },
+  {
+    "prefix": "800",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "801",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "802",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "803",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "804",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "805",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "806",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "807",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "808",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "809",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "810",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "811",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "812",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "813",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "814",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "815",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "816",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "817",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "818",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "819",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "820",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "821",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "822",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "823",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "824",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "825",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "826",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "827",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "828",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "829",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "830",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "831",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "832",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "833",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "834",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "835",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "836",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "837",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "838",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "839",
+    "mo": "GS1 Italy"
+  },
+  {
+    "prefix": "840",
+    "mo": "GS1 Spain"
+  },
+  {
+    "prefix": "841",
+    "mo": "GS1 Spain"
+  },
+  {
+    "prefix": "842",
+    "mo": "GS1 Spain"
+  },
+  {
+    "prefix": "843",
+    "mo": "GS1 Spain"
+  },
+  {
+    "prefix": "844",
+    "mo": "GS1 Spain"
+  },
+  {
+    "prefix": "845",
+    "mo": "GS1 Spain"
+  },
+  {
+    "prefix": "846",
+    "mo": "GS1 Spain"
+  },
+  {
+    "prefix": "847",
+    "mo": "GS1 Spain"
+  },
+  {
+    "prefix": "848",
+    "mo": "GS1 Spain"
+  },
+  {
+    "prefix": "849",
+    "mo": "GS1 Spain"
+  },
+  {
+    "prefix": "850",
+    "mo": "GS1 Cuba"
+  },
+  {
+    "prefix": "858",
+    "mo": "GS1 Slovakia"
+  },
+  {
+    "prefix": "859",
+    "mo": "GS1 Czech"
+  },
+  {
+    "prefix": "860",
+    "mo": "GS1 Serbia"
+  },
+  {
+    "prefix": "865",
+    "mo": "GS1 Mongolia"
+  },
+  {
+    "prefix": "867",
+    "mo": "GS1 North Korea"
+  },
+  {
+    "prefix": "868",
+    "mo": "GS1 Turkey"
+  },
+  {
+    "prefix": "869",
+    "mo": "GS1 Turkey"
+  },
+  {
+    "prefix": "870",
+    "mo": "GS1 Netherlands"
+  },
+  {
+    "prefix": "871",
+    "mo": "GS1 Netherlands"
+  },
+  {
+    "prefix": "872",
+    "mo": "GS1 Netherlands"
+  },
+  {
+    "prefix": "873",
+    "mo": "GS1 Netherlands"
+  },
+  {
+    "prefix": "874",
+    "mo": "GS1 Netherlands"
+  },
+  {
+    "prefix": "875",
+    "mo": "GS1 Netherlands"
+  },
+  {
+    "prefix": "876",
+    "mo": "GS1 Netherlands"
+  },
+  {
+    "prefix": "877",
+    "mo": "GS1 Netherlands"
+  },
+  {
+    "prefix": "878",
+    "mo": "GS1 Netherlands"
+  },
+  {
+    "prefix": "879",
+    "mo": "GS1 Netherlands"
+  },
+  {
+    "prefix": "880",
+    "mo": "GS1 South Korea"
+  },
+  {
+    "prefix": "883",
+    "mo": "GS1 Myanmar"
+  },
+  {
+    "prefix": "884",
+    "mo": "GS1 Cambodia"
+  },
+  {
+    "prefix": "885",
+    "mo": "GS1 Thailand"
+  },
+  {
+    "prefix": "888",
+    "mo": "GS1 Singapore"
+  },
+  {
+    "prefix": "890",
+    "mo": "GS1 India"
+  },
+  {
+    "prefix": "893",
+    "mo": "GS1 Vietnam"
+  },
+  {
+    "prefix": "894",
+    "mo": "Managed by GS1 Global Office for future MO"
+  },
+  {
+    "prefix": "896",
+    "mo": "GS1 Pakistan"
+  },
+  {
+    "prefix": "899",
+    "mo": "GS1 Indonesia"
+  },
+  {
+    "prefix": "900",
+    "mo": "GS1 Austria"
+  },
+  {
+    "prefix": "901",
+    "mo": "GS1 Austria"
+  },
+  {
+    "prefix": "902",
+    "mo": "GS1 Austria"
+  },
+  {
+    "prefix": "903",
+    "mo": "GS1 Austria"
+  },
+  {
+    "prefix": "904",
+    "mo": "GS1 Austria"
+  },
+  {
+    "prefix": "905",
+    "mo": "GS1 Austria"
+  },
+  {
+    "prefix": "906",
+    "mo": "GS1 Austria"
+  },
+  {
+    "prefix": "907",
+    "mo": "GS1 Austria"
+  },
+  {
+    "prefix": "908",
+    "mo": "GS1 Austria"
+  },
+  {
+    "prefix": "909",
+    "mo": "GS1 Austria"
+  },
+  {
+    "prefix": "910",
+    "mo": "GS1 Austria"
+  },
+  {
+    "prefix": "911",
+    "mo": "GS1 Austria"
+  },
+  {
+    "prefix": "912",
+    "mo": "GS1 Austria"
+  },
+  {
+    "prefix": "913",
+    "mo": "GS1 Austria"
+  },
+  {
+    "prefix": "914",
+    "mo": "GS1 Austria"
+  },
+  {
+    "prefix": "915",
+    "mo": "GS1 Austria"
+  },
+  {
+    "prefix": "916",
+    "mo": "GS1 Austria"
+  },
+  {
+    "prefix": "917",
+    "mo": "GS1 Austria"
+  },
+  {
+    "prefix": "918",
+    "mo": "GS1 Austria"
+  },
+  {
+    "prefix": "919",
+    "mo": "GS1 Austria"
+  },
+  {
+    "prefix": "930",
+    "mo": "GS1 Australia"
+  },
+  {
+    "prefix": "931",
+    "mo": "GS1 Australia"
+  },
+  {
+    "prefix": "932",
+    "mo": "GS1 Australia"
+  },
+  {
+    "prefix": "933",
+    "mo": "GS1 Australia"
+  },
+  {
+    "prefix": "934",
+    "mo": "GS1 Australia"
+  },
+  {
+    "prefix": "935",
+    "mo": "GS1 Australia"
+  },
+  {
+    "prefix": "936",
+    "mo": "GS1 Australia"
+  },
+  {
+    "prefix": "937",
+    "mo": "GS1 Australia"
+  },
+  {
+    "prefix": "938",
+    "mo": "GS1 Australia"
+  },
+  {
+    "prefix": "939",
+    "mo": "GS1 Australia"
+  },
+  {
+    "prefix": "940",
+    "mo": "GS1 New Zealand"
+  },
+  {
+    "prefix": "941",
+    "mo": "GS1 New Zealand"
+  },
+  {
+    "prefix": "942",
+    "mo": "GS1 New Zealand"
+  },
+  {
+    "prefix": "943",
+    "mo": "GS1 New Zealand"
+  },
+  {
+    "prefix": "944",
+    "mo": "GS1 New Zealand"
+  },
+  {
+    "prefix": "945",
+    "mo": "GS1 New Zealand"
+  },
+  {
+    "prefix": "946",
+    "mo": "GS1 New Zealand"
+  },
+  {
+    "prefix": "947",
+    "mo": "GS1 New Zealand"
+  },
+  {
+    "prefix": "948",
+    "mo": "GS1 New Zealand"
+  },
+  {
+    "prefix": "949",
+    "mo": "GS1 New Zealand"
+  },
+  {
+    "prefix": "950",
+    "mo": "GS1 Global Office"
+  },
+  {
+    "prefix": "951",
+    "mo": "Global Office - General Manager Number, see Note 2"
+  },
+  {
+    "prefix": "952",
+    "mo": "Used for demonstrations and examples of the GS1 system"
+  },
+  {
+    "prefix": "955",
+    "mo": "GS1 Malaysia"
+  },
+  {
+    "prefix": "958",
+    "mo": "GS1 Macau, China"
+  },
+  {
+    "prefix": "960",
+    "mo": "Global Office - GTIN-8, see note 3"
+  },
+  {
+    "prefix": "961",
+    "mo": "Global Office - GTIN-8, see note 3"
+  },
+  {
+    "prefix": "962",
+    "mo": "Global Office - GTIN-8, see note 3"
+  },
+  {
+    "prefix": "963",
+    "mo": "Global Office - GTIN-8, see note 3"
+  },
+  {
+    "prefix": "964",
+    "mo": "Global Office - GTIN-8, see note 3"
+  },
+  {
+    "prefix": "965",
+    "mo": "Global Office - GTIN-8, see note 3"
+  },
+  {
+    "prefix": "966",
+    "mo": "Global Office - GTIN-8, see note 3"
+  },
+  {
+    "prefix": "967",
+    "mo": "Global Office - GTIN-8, see note 3"
+  },
+  {
+    "prefix": "968",
+    "mo": "Global Office - GTIN-8, see note 3"
+  },
+  {
+    "prefix": "969",
+    "mo": "Global Office - GTIN-8, see note 3"
+  },
+  {
+    "prefix": "977",
+    "mo": "Serial publications (ISSN)"
+  },
+  {
+    "prefix": "978",
+    "mo": "Bookland (ISBN)"
+  },
+  {
+    "prefix": "979",
+    "mo": "Bookland (ISBN)"
+  },
+  {
+    "prefix": "980",
+    "mo": "Refund receipts"
+  },
+  {
+    "prefix": "981",
+    "mo": "GS1 coupon identification for common currency areas"
+  },
+  {
+    "prefix": "982",
+    "mo": "GS1 coupon identification for common currency areas"
+  },
+  {
+    "prefix": "983",
+    "mo": "GS1 coupon identification for common currency areas"
+  },
+  {
+    "prefix": "984",
+    "mo": "GS1 coupon identification for common currency areas"
+  },
+  {
+    "prefix": "99",
+    "mo": "GS1 coupon identification"
+  }
+]

@@ -35,7 +35,7 @@
 
 */
 
-function interpretScan(scan) {
+async function interpretScan(scan) {
   let gtinRE = /^(\d{8})$|^(\d{12,14})$/;
   let e, gs1DigitalLinkURI, gs1ElementStrings, gs1Array, primaryKey, AIstringBrackets, AIstringFNC1, errmsg, gs1dlt;
   let dlOrderedAIlist = [];
@@ -97,7 +97,7 @@ function interpretScan(scan) {
     for (i in gs1Array.GS1) {
       if (gs1dlt.aitable.find(x => x.ai === i).type === 'I') {
         primaryKey = i;
-        console.log('Primary key is ' + primaryKey);
+        console.log(`Primary key is ${primaryKey} and its value is ${gs1Array.GS1[primaryKey]}`);
         dlOrderedAIlist.push(getAIElement(i, gs1dlt, gs1Array.GS1, dateAIs));
         done.push(i);
       }
@@ -129,6 +129,7 @@ function interpretScan(scan) {
     let returnObject = sortElementString(gs1Array.GS1);
     returnObject['ol'] = dlOrderedAIlist;
     returnObject['dl'] = gs1DigitalLinkURI;
+    returnObject['licensingMO'] = await getLicensingMO(primaryKey, gs1Array.GS1[primaryKey]);
     console.log(returnObject);
     return returnObject;
   }
@@ -230,9 +231,20 @@ function escapeReservedCharacters(str) {
   return str;
 }
 
+const getLicensingMO = async (primaryKey, pkValue) => {
+  let mo;
+  /* We need the list of MO prefixes which comes from a separate file */
+  await fetch("https://gs1.github.io/interpretGS1scan/MOprefixStrings.json")
+    .then(response => response.json())
+    .then(moPrefixes => {
+      const offset = primaryKey === '01' ? 1:0;
+      mo = moPrefixes.find(x => x.prefix === pkValue.substring(offset,x.prefix.length + offset)).mo;
+    });
+  return mo;
+}
 
-function displayInterpretation(scan, outputNode) {
-  let scanObj = interpretScan(scan);
+async function displayInterpretation(scan, outputNode) {
+  let scanObj = await interpretScan(scan);
   outputNode.innerHTML = '';
 
   // We can test whether we have any errors at this point by looking for a value of errmsg
@@ -325,7 +337,20 @@ function displayInterpretation(scan, outputNode) {
     div.appendChild(p);
 
     outputNode.appendChild(div);
+
+    label = document.createElement('label');
+    label.htmlFor = 'licensingMO';
+    label.classList.add('sectionHeader');
+    label.appendChild(document.createTextNode('Licensing GS1 Member Organisation'));
+    outputNode.appendChild(label);
+    div = document.createElement('div');
+    div.id = 'licensingMO';
+    p = document.createElement('p');
+    p.appendChild(document.createTextNode(scanObj.licensingMO));
+    div.appendChild(p);
+
+    outputNode.appendChild(div);
+
   }
 }
-
 
