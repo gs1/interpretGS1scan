@@ -243,6 +243,19 @@ const getLicensingMO = async (primaryKey, pkValue) => {
   return mo;
 }
 
+const getCoO = async (numeric) => {
+  let country;
+  /* We need the list of numeric country codes which comes from a separate file */
+  /* Original source is https://github.com/lukes/ISO-3166-Countries-with-Regional-Codes */
+  await fetch("https://gs1.github.io/interpretGS1scan/slim-2.json")
+    .then(response => response.json())
+    .then(isoCodes => {
+      country = isoCodes.find(x => x['country-code'] === numeric).name;
+    });
+  return `${numeric} (${country})`;
+}
+
+
 async function displayInterpretation(scan, outputNode) {
   let scanObj = await interpretScan(scan);
   outputNode.innerHTML = '';
@@ -281,7 +294,10 @@ async function displayInterpretation(scan, outputNode) {
       p.appendChild(span);
       span = document.createElement('span');
       span.classList.add('aiValue');
-      let v = (scanObj.ol[i].value == undefined) ? '' : decodeURIComponent(scanObj.ol[i].value);
+      let v = '';
+      if (scanObj.ol[i].value !== undefined) {
+        v = (scanObj.ol[i].ai === "422") ? await getCoO(scanObj.ol[i].value) : decodeURIComponent(scanObj.ol[i].value);
+      }
       span.appendChild(document.createTextNode(v));
       p.appendChild(span);
       div.appendChild(p);
