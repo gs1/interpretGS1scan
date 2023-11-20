@@ -1,9 +1,11 @@
 p.aiDisplay span.ai {
   width: 4em;
+  margin-right: 1em;
 }
 
 p.aiDisplay span.aiLabel {
   width: 12em;
+  margin-right: 1em;
 }
 
 div#syntaxes p label {
