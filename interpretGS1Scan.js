@@ -9,8 +9,8 @@
 
   If there are no errors, the interpretScan function returns an object as follows
 
-  AIbrackets: The equivalent GS1 element string in human-readable AI syntax
-  AIfnc1: The equivalent GS1 element string in AI syntax with FNC1 (as used in barcodes)
+  AIbrackets: The equivalent GS1 element string in human-readable Emlement String syntax
+  AIfnc1: The equivalent GS1 element strings with FNC1 (as used in barcodes)
   dl: The equivalent GS1 Digital Link URL (on id.gs1.org)
   ol: An ordered array of objects parsed/interpreted from the input string:
     ai:    the GS1 Application Identifier
@@ -26,8 +26,8 @@
   Simply pass the string to be interpreted to the interpretScan() function.
 
   It can handle any of the 3 formats:
-    - Human readable AI syntax
-    - Pure AI syntax
+    - Human readable Element String syntax
+    - Pure Element String syntax
     - GS1 Digital Link
 
   If the input string cannot be interpreted, i.e. it's not a valid GS1 string, then the returned object
@@ -317,7 +317,7 @@ async function displayInterpretation(scan, outputNode) {
     let p = document.createElement('p');
     label = document.createElement('label');
     label.htmlFor = 'aiBrackets';
-    label.appendChild(document.createTextNode('Human-readable AI syntax'));
+    label.appendChild(document.createTextNode('Human-readable GS1 Element String syntax'));
     let span = document.createElement('span');
     span.classList.add('syntax');
     span.id = 'aiBrackets';
@@ -329,7 +329,7 @@ async function displayInterpretation(scan, outputNode) {
     p = document.createElement('p');
     label = document.createElement('label');
     label.htmlFor = 'aiFNC1';
-    label.appendChild(document.createTextNode('Native AI syntax'));
+    label.appendChild(document.createTextNode('Native GS1 Element String syntax'));
     span = document.createElement('span');
     span.classList.add('syntax');
     span.id = 'aiFNC1';
