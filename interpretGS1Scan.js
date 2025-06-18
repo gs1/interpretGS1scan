@@ -296,7 +296,8 @@ async function displayInterpretation(scan, outputNode) {
       span.classList.add('aiValue');
       let v = '';
       if (scanObj.ol[i].value !== undefined) {
-        v = (scanObj.ol[i].ai === "422") ? await getCoO(scanObj.ol[i].value) : decodeURIComponent(scanObj.ol[i].value);
+        console.log(`scanObj.ol[i].ai is ${scanObj.ol[i].ai} and the value is ${scanObj.ol[i].value}`)
+        v = (scanObj.ol[i].ai === "422") ? await getCoO(scanObj.ol[i].value) : scanObj.ol[i].value;
       }
       span.appendChild(document.createTextNode(v));
       p.appendChild(span);
@@ -320,7 +321,7 @@ async function displayInterpretation(scan, outputNode) {
     let span = document.createElement('span');
     span.classList.add('syntax');
     span.id = 'aiBrackets';
-    span.appendChild(document.createTextNode(decodeURIComponent(scanObj.AIbrackets)));
+    span.appendChild(document.createTextNode(scanObj.AIbrackets));
     p.appendChild(label);
     p.appendChild(span);
     div.appendChild(p);
@@ -332,7 +333,7 @@ async function displayInterpretation(scan, outputNode) {
     span = document.createElement('span');
     span.classList.add('syntax');
     span.id = 'aiFNC1';
-    span.appendChild(document.createTextNode(decodeURIComponent(scanObj.AIfnc1)));
+    span.appendChild(document.createTextNode(scanObj.AIfnc1));
     p.appendChild(label);
     p.appendChild(span);
     div.appendChild(p);
